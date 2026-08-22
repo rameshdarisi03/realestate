@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Star, Quote, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface Testimonial {
+interface MysoreReview {
   id: string;
   quote: string;
   author: string;
@@ -16,14 +16,14 @@ interface Testimonial {
   signature: string;
 }
 
-const MYSORE_REVIEWS: Testimonial[] = [
+const MYSORE_REVIEWS: MysoreReview[] = [
   {
     id: '1',
     quote: 'We spent over a year looking for a genuine heritage bungalow in VV Mohalla. BRP Properties helped us navigate clear titles and finalized the purchase in just 3 weeks. Truly exceptional service.',
     author: 'Dr. K. S. Venkatesh & Family',
     role: 'Senior Consultant Cardiologist',
     locationTag: 'VV Mohalla, Mysore',
-    transactionType: 'Bought 5 BHK Heritage Bungalow',
+    transactionType: 'Bought Heritage Bungalow',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
     signature: 'Dr. Venkatesh',
@@ -34,109 +34,109 @@ const MYSORE_REVIEWS: Testimonial[] = [
     author: 'Elena Rostova',
     role: 'Yoga Practitioner & Author',
     locationTag: 'Gokulam 3rd Stage, Mysore',
-    transactionType: 'Rented 4 BHK Garden Villa',
+    transactionType: 'Rented Palm Grove Villa',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
     signature: 'Elena R.',
   },
   {
     id: '3',
     quote: 'Acquiring a large 12,000 sq.ft residential plot in Yadavagiri required strict due diligence. BRP’s valuation accuracy and paperwork handling gave us 100% peace of mind.',
     author: 'M. S. Nagaraj',
-    role: 'Managing Director, Silk & Spices Export',
+    role: 'Industrialist & Exporter',
     locationTag: 'Yadavagiri, Mysore',
-    transactionType: 'Bought 12,000 Sq.Ft Estate Plot',
+    transactionType: 'Bought Estate Plot',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    signature: 'M.S. Nagaraj',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
+    signature: 'M. S. Nagaraj',
   },
   {
     id: '4',
-    quote: 'Relocating our family from Bengaluru to Mysore was made effortless. We found a stunning luxury apartment in Jayalakshmipuram right next to our children’s school.',
-    author: 'Ananya & Rohit Deshmukh',
-    role: 'Tech Leaders, Software Exports',
-    locationTag: 'Jayalakshmipuram, Mysore',
-    transactionType: 'Rented 3 BHK Luxury Apartment',
+    quote: 'We secured a 5-year non-escalating lease on a modern villa in Saraswathipuram. The legal clarity and tenant onboarding were world-class. Highly recommended!',
+    author: 'Prof. Ananya Somesh',
+    role: 'Dean of Humanities',
+    locationTag: 'Saraswathipuram, Mysore',
+    transactionType: 'Leased 4 BHK Villa',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    signature: 'Ananya D.',
+    signature: 'Ananya Somesh',
   },
   {
     id: '5',
-    quote: 'Secured a 5-year fixed lease on a beautiful traditional-modern courtyard home in Saraswathipuram. The landlord negotiations and legal lease agreement were completed flawlessly.',
-    author: 'Prof. Ramachandra Bhat',
-    role: 'Dean of Humanities, University of Mysore',
-    locationTag: 'Saraswathipuram, Mysore',
-    transactionType: 'Leased 4 BHK Courtyard Home',
+    quote: 'Selling our family’s ancestral property near Lalitha Mahal Road was an emotional journey. BRP treated our heritage with the utmost respect and connected us with an ideal buyer.',
+    author: 'Raghavendra Urs',
+    role: 'Heritage Custodian',
+    locationTag: 'Lalitha Mahal Road, Mysore',
+    transactionType: 'Sold Heritage Parcel',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    signature: 'R. Bhat',
+    signature: 'R. Urs',
   },
   {
     id: '6',
-    quote: 'We bought a scenic land parcel facing Chamundi Hill for our family retirement home. The scenic view and mountain tranquility are priceless. BRP is the undisputed leader in Mysore.',
-    author: 'Col. Pradeep & Meera Somanna',
-    role: 'Retired Armed Forces Veteran',
-    locationTag: 'Chamundi Hill Road, Mysore',
-    transactionType: 'Bought 1-Acre Hill View Plot',
+    quote: 'Relocating our tech leadership from Bengaluru to Mysore was seamless. The luxury apartment in Jayalakshmipuram offered the perfect balance of green tranquility and high-speed fiber.',
+    author: 'Vikram & Shweta Nambiar',
+    role: 'Fintech Founder & VP',
+    locationTag: 'Jayalakshmipuram, Mysore',
+    transactionType: 'Rented Royale Residence',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
-    signature: 'P. Somanna',
+    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+    signature: 'Vikram Nambiar',
   },
   {
     id: '7',
-    quote: 'Investing in a lake-view villa plot on KRS Road was one of our best financial decisions. The appreciation has been tremendous and the infrastructure is top notch.',
-    author: 'Suresh Gowda',
-    role: 'Coffee Planter & Agri Entrepreneur',
+    quote: 'Purchasing an estate plot overlooking the backwaters on KRS Road was the best investment decision for our retirement. The BRP advisory team is unmatched in Mysore.',
+    author: 'Col. Rajeshwar Rao (Retd.)',
+    role: 'Defence Veteran & Investor',
     locationTag: 'KRS Road, Mysore',
-    transactionType: 'Bought Lakeview Villa Plot',
+    transactionType: 'Bought Lakeview Plot',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
-    signature: 'Suresh G.',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+    signature: 'Rajeshwar Rao',
   },
   {
     id: '8',
-    quote: 'As an executive managing operations in Hebbal Industrial area, I needed a quiet, prestigious home in Yadavagiri. BRP found me the perfect duplex with zero hassle.',
-    author: 'Ashwin Chawla',
-    role: 'VP Operations, Global Automotive',
-    locationTag: 'Yadavagiri, Mysore',
-    transactionType: 'Rented 4 BHK Executive Duplex',
+    quote: 'Finding a 4 BHK home in VV Mohalla with dedicated servant quarters and a lush mango grove was made possible through BRP’s private off-market network.',
+    author: 'Meera & Sanjay Hegde',
+    role: 'Coffee Estate Owners',
+    locationTag: 'VV Mohalla Central, Mysore',
+    transactionType: 'Bought 5 BHK Residence',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    signature: 'Ashwin C.',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+    signature: 'Meera Hegde',
   },
   {
     id: '9',
-    quote: 'Our yoga retreat community required a 5-year continuous lease in Gokulam with strict privacy. BRP delivered exactly what we envisioned within our budget.',
-    author: 'Sophie & Marc Dubois',
-    role: 'Founders, Mysore Holistic Retreats',
+    quote: 'We leased a tranquil yoga sanctuary in Gokulam 2nd Stage. Zero brokerage surprises, complete transparency, and swift landlord coordination. Superb experience!',
+    author: 'Marcus & Chloe Dubois',
+    role: 'Wellness Retreat Organizers',
     locationTag: 'Gokulam 2nd Stage, Mysore',
-    transactionType: 'Leased 5-Year Yoga Sanctuary',
+    transactionType: 'Leased Yoga Shala Villa',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-    signature: 'Sophie Dubois',
+    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80',
+    signature: 'Marcus Dubois',
   },
   {
     id: '10',
-    quote: 'We wanted a 100% Vastu-compliant independent home near Mysore Palace cultural hub. Saraswathipuram Heritage Court was the perfect match for our family.',
-    author: 'Justice H. N. Sastry (Retd.)',
-    role: 'Former High Court Jurist',
-    locationTag: 'Saraswathipuram, Mysore',
-    transactionType: 'Bought 4 BHK Heritage Villa',
+    quote: 'The commercial plot on Hebbal Ring Road gave our hospital clinic prime visibility. BRP took care of MUDA clearance, layout surveys, and paperwork seamlessly.',
+    author: 'Dr. Nandini Deshpande',
+    role: 'Managing Trustee, Healthcare',
+    locationTag: 'Hebbal Ring Road, Mysore',
+    transactionType: 'Acquired Commercial Land',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
-    signature: 'H.N. Sastry',
+    avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80',
+    signature: 'Dr. Nandini',
   },
   {
     id: '11',
-    quote: 'Acquired a prime commercial ring road plot in Hebbal for our upcoming diagnostic center. Clear titles, single owner, and zero encumbrances.',
-    author: 'Dr. Shalini Murthy',
-    role: 'Managing Partner, HealthCare Labs',
-    locationTag: 'Hebbal Ring Road, Mysore',
-    transactionType: 'Bought Commercial Ring Road Plot',
+    quote: 'Their deep knowledge of Mysore’s residential micro-markets—from Vijayanagar to Chamundi Foothills—is unmatched. We found our forever family home in Saraswathipuram.',
+    author: 'Suresh & Preeti Patil',
+    role: 'Automotive Components MD',
+    locationTag: 'Saraswathipuram, Mysore',
+    transactionType: 'Bought Heritage Court Villa',
     rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80',
-    signature: 'Dr. Shalini',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    signature: 'Suresh Patil',
   },
   {
     id: '12',
@@ -152,95 +152,207 @@ const MYSORE_REVIEWS: Testimonial[] = [
 ];
 
 export const TestimonialsSection: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Mobile index (0 to 11, scrolls every 2 seconds single tile)
+  const [mobileIndex, setMobileIndex] = useState(0);
+  // Desktop index (0 to 3, scrolls every 3 seconds 3 tiles)
+  const [desktopIndex, setDesktopIndex] = useState(0);
+  
   const [isPaused, setIsPaused] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
   const totalReviews = MYSORE_REVIEWS.length;
-  const itemsPerPage = 3;
-  const maxIndex = Math.ceil(totalReviews / itemsPerPage) - 1;
+  const itemsPerDesktopPage = 3;
+  const maxDesktopIndex = Math.ceil(totalReviews / itemsPerDesktopPage) - 1;
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+  // Next / Prev actions
+  const nextMobile = () => setMobileIndex((prev) => (prev >= totalReviews - 1 ? 0 : prev + 1));
+  const prevMobile = () => setMobileIndex((prev) => (prev <= 0 ? totalReviews - 1 : prev - 1));
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
+  const nextDesktop = () => setDesktopIndex((prev) => (prev >= maxDesktopIndex ? 0 : prev + 1));
+  const prevDesktop = () => setDesktopIndex((prev) => (prev <= 0 ? maxDesktopIndex : prev - 1));
 
-  // Auto-scroll every 3 seconds (pauses on hover)
+  // Mobile Timer: 2 Seconds Auto-Scroll Single Tile Sliding from Left to Right
   useEffect(() => {
-    if (!isPaused) {
-      timerRef.current = setInterval(() => {
-        nextSlide();
-      }, 3000);
-    }
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isPaused, maxIndex]);
+    if (isPaused) return;
+    const mobileTimer = setInterval(() => {
+      nextMobile();
+    }, 2000);
+    return () => clearInterval(mobileTimer);
+  }, [isPaused, totalReviews]);
 
-  const visibleReviews = MYSORE_REVIEWS.slice(
-    currentIndex * itemsPerPage,
-    currentIndex * itemsPerPage + itemsPerPage
+  // Desktop Timer: 3 Seconds Auto-Scroll
+  useEffect(() => {
+    if (isPaused) return;
+    const desktopTimer = setInterval(() => {
+      nextDesktop();
+    }, 3000);
+    return () => clearInterval(desktopTimer);
+  }, [isPaused, maxDesktopIndex]);
+
+  const visibleDesktopReviews = MYSORE_REVIEWS.slice(
+    desktopIndex * itemsPerDesktopPage,
+    desktopIndex * itemsPerDesktopPage + itemsPerDesktopPage
   );
 
   return (
-    <section className="py-24 px-6 md:px-16 w-full max-w-[1280px] mx-auto bg-white dark:bg-[#121212] transition-colors relative">
+    <section className="py-20 md:py-24 px-4 sm:px-6 md:px-16 w-full max-w-[1280px] mx-auto bg-white dark:bg-[#121212] transition-colors relative overflow-hidden">
       
-      {/* Editorial Header in Simple & Impactful English */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      {/* Editorial Header in Simple & Impactful English (Title Case) */}
+      <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
         <p className="font-serif italic text-xl sm:text-2xl text-[#a16207] dark:text-[#d97706] mb-2">
           Stories of Sanctuary
         </p>
         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-current">
           Loved by Families &amp; Homeowners in Mysore
         </h2>
-        <p className="text-sm opacity-75 font-sans leading-relaxed text-current">
+        <p className="text-xs sm:text-sm opacity-75 font-sans leading-relaxed text-current px-2">
           Real experiences from doctors, business owners, expats, and families who found their dream property with BRP Properties in Mysore.
         </p>
       </div>
 
-      {/* Carousel Container with Hover Pause & Stylized Arrows */}
+      {/* 1. MOBILE VIEW (< md): Single Tile Sliding Left-to-Right Every 2 Seconds */}
       <div
-        className="relative"
+        className="block md:hidden relative"
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        
-        {/* Left Navigation Arrow */}
+        {/* Navigation Arrows for Mobile */}
         <button
-          onClick={prevSlide}
+          onClick={prevMobile}
+          className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-[#a16207] text-white flex items-center justify-center shadow-lg active:scale-95"
+          aria-label="Previous Review"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        <button
+          onClick={nextMobile}
+          className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-[#a16207] text-white flex items-center justify-center shadow-lg active:scale-95"
+          aria-label="Next Review"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Sliding Window Container */}
+        <div className="overflow-hidden px-5 py-2">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
+          >
+            {MYSORE_REVIEWS.map((item) => (
+              <div
+                key={item.id}
+                className="w-full flex-shrink-0 px-2"
+              >
+                <div className="bg-[#ffffff] dark:bg-[#191c1f] border border-black/10 dark:border-white/10 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] dark:shadow-none flex flex-col justify-between min-h-[380px]">
+                  
+                  {/* Top Quote Bubble & Stars */}
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="w-10 h-10 rounded-full bg-[#fef3c7] dark:bg-[#a16207]/20 flex items-center justify-center text-[#a16207] dark:text-[#f59e0b] shadow-inner">
+                      <Quote className="w-4 h-4 fill-current" />
+                    </div>
+                    <div className="flex items-center gap-1 text-amber-500">
+                      {[...Array(item.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Review Quote */}
+                  <p className="text-xs sm:text-sm leading-relaxed opacity-85 font-sans mb-4 text-current italic">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+
+                  {/* Client Signature */}
+                  <div className="border-t border-black/10 dark:border-white/10 pt-3 mb-4">
+                    <p className="font-serif italic text-xl text-[#a16207] dark:text-[#f59e0b]">
+                      {item.signature}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wider text-[#a16207] dark:text-[#f59e0b] font-bold font-sans mt-0.5">
+                      {item.transactionType}
+                    </p>
+                  </div>
+
+                  {/* Author Avatar & Role */}
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-amber-300 flex-shrink-0">
+                      <Image
+                        src={item.avatar}
+                        alt={item.author}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-serif font-bold text-xs text-current">
+                        {item.author}
+                      </h4>
+                      <p className="text-[10px] opacity-70 font-sans">
+                        {item.role} &bull; <span className="font-medium text-[#a16207] dark:text-[#f59e0b]">{item.locationTag}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Pagination Indicator Dots */}
+        <div className="flex justify-center items-center gap-1.5 mt-5">
+          {MYSORE_REVIEWS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setMobileIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                mobileIndex === i
+                  ? 'w-6 bg-[#a16207] dark:bg-[#f59e0b]'
+                  : 'w-1.5 bg-neutral-300 dark:bg-neutral-700'
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* 2. DESKTOP VIEW (>= md): 3-Card Grid Sliding every 3 seconds */}
+      <div
+        className="hidden md:block relative"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {/* Left Arrow */}
+        <button
+          onClick={prevDesktop}
           className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#a16207] text-white hover:bg-[#854d0e] flex items-center justify-center shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
           aria-label="Previous Reviews"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
 
-        {/* Right Navigation Arrow */}
+        {/* Right Arrow */}
         <button
-          onClick={nextSlide}
+          onClick={nextDesktop}
           className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#a16207] text-white hover:bg-[#854d0e] flex items-center justify-center shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
           aria-label="Next Reviews"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
-        {/* 3-Card Grid for Current Slide */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
-          {visibleReviews.map((item) => (
+        {/* 3-Card Grid for Current Desktop Slide */}
+        <div className="grid grid-cols-3 gap-8 transition-all duration-500">
+          {visibleDesktopReviews.map((item) => (
             <div
               key={item.id}
               className="group relative bg-[#ffffff] dark:bg-[#191c1f] border border-black/10 dark:border-white/10 p-8 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.04)] dark:shadow-none flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a16207]/40 min-h-[380px]"
             >
-              
-              {/* Top Floating Quote Bubble (Image 3) */}
+              {/* Top Quote Bubble */}
               <div className="flex justify-between items-start mb-6">
                 <div className="w-12 h-12 rounded-full bg-[#fef3c7] dark:bg-[#a16207]/20 flex items-center justify-center text-[#a16207] dark:text-[#f59e0b] shadow-inner">
                   <Quote className="w-5 h-5 fill-current" />
                 </div>
-                
-                {/* 5-Star Rating Bar */}
                 <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(item.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current" />
@@ -253,16 +365,19 @@ export const TestimonialsSection: React.FC = () => {
                 &ldquo;{item.quote}&rdquo;
               </p>
 
-              {/* Client Signature in Script Font (Image 3) */}
+              {/* Client Signature */}
               <div className="border-t border-black/10 dark:border-white/10 pt-3 mb-5">
                 <p className="font-serif italic text-2xl text-[#a16207] dark:text-[#f59e0b]">
                   {item.signature}
                 </p>
+                <p className="text-xs uppercase tracking-wider text-[#a16207] dark:text-[#f59e0b] font-bold font-sans mt-0.5">
+                  {item.transactionType}
+                </p>
               </div>
 
-              {/* Client Profile Avatar & Verified Tag (Image 4) */}
-              <div className="flex items-center gap-4 pt-1">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#a16207]/40 flex-shrink-0 shadow-md">
+              {/* Author Info */}
+              <div className="flex items-center gap-3.5">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 flex-shrink-0">
                   <Image
                     src={item.avatar}
                     alt={item.author}
@@ -271,41 +386,34 @@ export const TestimonialsSection: React.FC = () => {
                     sizes="48px"
                   />
                 </div>
-
-                <div className="flex flex-col">
-                  <h4 className="font-sans font-bold text-sm text-current">
+                <div>
+                  <h4 className="font-serif font-bold text-sm text-current">
                     {item.author}
                   </h4>
-                  <p className="text-[11px] opacity-70 font-sans">
-                    {item.role} &bull; <span className="text-[#a16207] dark:text-amber-400 font-medium">{item.locationTag}</span>
+                  <p className="text-xs opacity-70 font-sans">
+                    {item.role} &bull; <span className="font-medium text-[#a16207] dark:text-[#f59e0b]">{item.locationTag}</span>
                   </p>
-                  <div className="flex items-center gap-1 mt-1 text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold font-sans">
-                    <CheckCircle2 className="w-3 h-3" />
-                    <span>{item.transactionType}</span>
-                  </div>
                 </div>
               </div>
-
             </div>
           ))}
         </div>
 
-        {/* Carousel Pagination Indicator Dots */}
-        <div className="flex justify-center items-center gap-2.5 mt-10">
-          {[...Array(maxIndex + 1)].map((_, idx) => (
+        {/* Desktop Pagination Indicator Dots */}
+        <div className="flex justify-center items-center gap-2 mt-10">
+          {[...Array(maxDesktopIndex + 1)].map((_, i) => (
             <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                currentIndex === idx
-                  ? 'w-8 bg-[#a16207] dark:bg-[#d97706]'
-                  : 'w-2.5 bg-black/20 dark:bg-white/20 hover:bg-black/40'
+              key={i}
+              onClick={() => setDesktopIndex(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                desktopIndex === i
+                  ? 'w-8 bg-[#a16207] dark:bg-[#f59e0b]'
+                  : 'w-2 bg-neutral-300 dark:bg-neutral-700'
               }`}
-              aria-label={`Go to slide ${idx + 1}`}
+              aria-label={`Go to slide ${i + 1}`}
             />
           ))}
         </div>
-
       </div>
 
     </section>
