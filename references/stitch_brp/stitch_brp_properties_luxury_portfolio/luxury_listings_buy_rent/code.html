@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BRP Properties - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-surface": "#303031",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "surface-container-low": "#f5f3f3",
+                        "outline": "#747878",
+                        "on-tertiary-container": "#848480",
+                        "surface-container-highest": "#e4e2e2",
+                        "inverse-primary": "#c8c6c5",
+                        "on-background": "#1b1c1c",
+                        "secondary": "#775a19",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1c1b1b",
+                        "surface-container": "#efeded",
+                        "background": "#fbf9f9",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "surface-variant": "#e4e2e2",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "surface-bright": "#fbf9f9",
+                        "surface-dim": "#dbdad9",
+                        "primary": "#000000",
+                        "secondary-fixed": "#ffdea5",
+                        "tertiary-fixed": "#e4e2dd",
+                        "secondary-container": "#fed488",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#e5e2e1",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#1b1c19",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "on-primary-fixed": "#1c1b1b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f9;
+            color: #1b1c1c;
+        }
+        .minimal-input {
+            border: none;
+            border-bottom: 1px solid #747878;
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .minimal-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 2px solid #000000;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline sticky top-0 z-50 w-full transition-colors duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<div class="font-display-lg-mobile md:font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed">
+                BRP Properties
+            </div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 active:opacity-80 transition-all font-body-md text-body-md" href="#">Buy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 active:opacity-80 transition-all font-body-md text-body-md" href="#">Rent</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 active:opacity-80 transition-all font-body-md text-body-md" href="#">Developments</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 active:opacity-80 transition-all font-body-md text-body-md" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-DEFAULT hover:bg-secondary transition-colors duration-300 font-label-caps text-label-caps uppercase">
+                    Contact Us
+                </button>
+<button class="md:hidden flex items-center justify-center p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-12 gap-section-gap">
+<!-- Search & Filter Header -->
+<section class="flex flex-col gap-8 w-full">
+<div class="flex flex-col gap-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary">Curated Listings</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover exclusive properties across India's most prestigious neighborhoods. Quiet luxury, defined.</p>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-lg flex flex-col md:flex-row gap-6 items-end w-full shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="w-full md:w-1/4 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Location</label>
+<input class="minimal-input w-full font-body-md text-body-md text-primary" placeholder="City, Neighborhood" type="text" value="Mumbai, Bandra West"/>
+</div>
+<div class="w-full md:w-1/4 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Property Type</label>
+<select class="minimal-input w-full font-body-md text-body-md text-primary appearance-none cursor-pointer">
+<option>All Types</option>
+<option selected="">Luxury Apartment</option>
+<option>Villa</option>
+<option>Penthouse</option>
+</select>
+</div>
+<div class="w-full md:w-1/4 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Price Range</label>
+<select class="minimal-input w-full font-body-md text-body-md text-primary appearance-none cursor-pointer">
+<option>Any Price</option>
+<option selected="">₹10Cr - ₹25Cr</option>
+<option>₹25Cr - ₹50Cr</option>
+<option>₹50Cr +</option>
+</select>
+</div>
+<div class="w-full md:w-1/4 flex flex-col gap-2">
+<button class="w-full bg-primary text-on-primary py-3 rounded-DEFAULT hover:bg-secondary transition-colors duration-300 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">tune</span>
+                        Apply Filters
+                    </button>
+</div>
+</div>
+<div class="flex justify-between items-center w-full">
+<span class="font-body-md text-body-md text-on-surface-variant">Showing 12 results</span>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase">Sort by</span>
+<select class="minimal-input font-body-md text-body-md text-primary appearance-none cursor-pointer pb-1">
+<option>Featured</option>
+<option>Price: High to Low</option>
+<option>Newest</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Results Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter w-full">
+<!-- Property Card 1 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg mb-6 bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning, high-resolution wide shot of a modern luxury apartment interior in Mumbai, India. The space features floor-to-ceiling windows overlooking the Arabian Sea, bathed in warm, golden hour sunlight. The interior design is minimalist and sophisticated, utilizing a palette of crisp ivory, deep charcoal, and subtle champagne gold accents. High-quality materials like Italian marble floors and custom teak wood cabinetry are prominent. The atmosphere conveys quiet luxury, exclusivity, and architectural precision, perfectly aligning with the BRP Properties brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIK-oG7DRptAfvxen4uA95eDaB56rA_wxPpkml0mu6ezrYE3AloZBUdwltH4i8RoCy1nqnaVCHZMxFHlEDM45N-bpg3CBKh604UtBv-kHmomx-_UuaJZZCnrMLiW8J7A-b32fzq9J2TJ34_28T291T1ECGfHEYJMXZDtTMB9VN6tAK10Q6f2tQGCJEeslfqCfBl3CBoGe3nK5stLwd6I_bkC9NMK89hLXesdmFTcBjfuaSVH0JwQb7-w"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 px-3 py-1 backdrop-blur-sm rounded-DEFAULT">
+<span class="font-label-caps text-label-caps text-primary uppercase">For Sale</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary truncate">The Seaface Residences</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Bandra West, Mumbai</p>
+<div class="flex items-center gap-4 my-2 border-y border-outline-variant py-2">
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">4 Beds</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">4.5 Baths</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">5,200 Sq.Ft.</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-outline">Price</span>
+<span class="font-headline-md text-headline-md text-primary">₹22.5 Cr</span>
+</div>
+<a class="font-label-caps text-label-caps text-secondary uppercase hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Property Card 2 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg mb-6 bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An expansive, high-contrast exterior shot of a modern architectural villa in a gated community in Delhi, India. The structure is characterized by clean, rectilinear lines, large glass facades, and minimalist concrete finishes. It is set against a serene, meticulously landscaped garden with a reflection pool. The lighting is bright and even, creating a light-mode aesthetic that emphasizes the stark interplay of shadows and architectural forms. The mood is tranquil, secluded, and highly premium, reflecting the 'Quiet Luxury' ethos." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgqtQac58C-q29zkjnTVcRcZZsBnZ02M0Z0He_r9WxVkwxRVhK3jZMYaT9rBL4V-rKLIBukiyjzT_k-zvjY5dvlIv58r_rSsgioNM7iitbxI7HKcRDbuWcSeAxCutBWN7pVAtvzJB22_9FRtOK8nSzkBEJ2Q4w50roRXGjuxAGIW0j35lTgVRQz_MOsp9AiF3Av097wKJt9EhkYhIZhZ8pR8ZwY_JdwV7gzuybmKtAy-99IQ4sf3AEbg"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 px-3 py-1 backdrop-blur-sm rounded-DEFAULT">
+<span class="font-label-caps text-label-caps text-primary uppercase">For Sale</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary truncate">Aurum Villas Estate</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Vasant Vihar, New Delhi</p>
+<div class="flex items-center gap-4 my-2 border-y border-outline-variant py-2">
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">6 Beds</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">7 Baths</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">12,000 Sq.Ft.</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-outline">Price</span>
+<span class="font-headline-md text-headline-md text-primary italic text-lg">Address upon request</span>
+</div>
+<a class="font-label-caps text-label-caps text-secondary uppercase hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Property Card 3 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg mb-6 bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine, wide-angle interior view of a luxury penthouse living area in Bengaluru, India. The space features double-height ceilings and a dramatic, minimalist chandelier. Large windows frame a panoramic view of the city skyline at twilight. The interior palette is restrained, using ivory, soft grays, and rich charcoal tones, with subtle metallic brass accents. The furniture is sleek and modern. The overall aesthetic is highly sophisticated, airy, and exemplifies high-net-worth real estate design in a light-mode context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYzHrVMM567BOVP1XG8_kT225XKO_OGiGLVpbPCPHwdaQxLiA3zT1D3mAUuZeXIoYMnC9vM_6Gkw-nOZw2VZE9ihByBIkDhR8tSeCNMWV51IbJH70OlrLdt0pw_sgmKatQiNUXcMtoMY0wk0zbnstOuLw4upTz_rHhEt9kSQnNZ6q28QZ0_ZzBi4Iaxd_Uct65eNg32AqDyd6P2ujdDj5ZxwKOWJYjNvYUUFsBJ98t277v6ovEWKm-Yg"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 px-3 py-1 backdrop-blur-sm rounded-DEFAULT">
+<span class="font-label-caps text-label-caps text-primary uppercase">For Rent</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary truncate">Skyline Penthouse</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Koramangala, Bengaluru</p>
+<div class="flex items-center gap-4 my-2 border-y border-outline-variant py-2">
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">3 Beds</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">3.5 Baths</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">4,100 Sq.Ft.</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-outline">Price</span>
+<span class="font-headline-md text-headline-md text-primary">₹8.5 L / mo</span>
+</div>
+<a class="font-label-caps text-label-caps text-secondary uppercase hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-4 mt-8">
+<button class="p-2 border border-outline-variant rounded-full hover:bg-surface-container-high transition-colors text-primary disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-2 font-body-md text-body-md text-primary">
+<span class="font-bold border-b-2 border-primary">1</span>
+<span class="text-on-surface-variant hover:text-primary cursor-pointer px-2">2</span>
+<span class="text-on-surface-variant hover:text-primary cursor-pointer px-2">3</span>
+<span class="text-outline px-1">...</span>
+</div>
+<button class="p-2 border border-outline-variant rounded-full hover:bg-surface-container-high transition-colors text-primary">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-container-max mx-auto mt-section-gap">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<div class="font-display-lg-mobile md:font-display-lg text-headline-md text-on-primary dark:text-on-surface">
+                BRP Properties
+            </div>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-surface text-center md:text-left max-w-sm">
+                © 2024 BRP Properties. All rights reserved. Defined by architectural precision.
+            </p>
+</div>
+<nav class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Cookie Policy</a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Sustainability</a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Careers</a>
+</nav>
+</footer>
+</body></html>

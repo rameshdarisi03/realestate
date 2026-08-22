@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'ÉTOILE | Ultra-Luxury Real Estate & Private Residences</title>
+  <meta name="description" content="Curated off-market architectural trophy estates, sky penthouses, and private coastal sanctuaries for the world's most discerning collectors." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#FDFBF7',
+              100: '#FAF4E8',
+              200: '#F3E5AB',
+              300: '#E5C378',
+              400: '#D4AF37',
+              500: '#B8860B',
+              600: '#9A7228',
+              700: '#755212',
+              800: '#53380B',
+              900: '#342104'
+            }
+          },
+          scale: {
+            '108': '1.08',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="selection:bg-gold-400 selection:text-black">
+
+  <!-- ==========================================================================
+       1. Top Executive Banner
+       ========================================================================== -->
+  <div class="border-b border-white/10 text-[11px] py-2 px-4 md:px-12 flex flex-wrap justify-between items-center transition-colors bg-black/40 backdrop-blur-md relative z-40">
+    <div class="flex items-center space-x-6 text-gray-400">
+      <span class="flex items-center text-gold-300 font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block mr-2 animate-pulse"></span>
+        Global Private Desks:
+      </span>
+      <span class="hidden sm:inline">Beverly Hills</span>
+      <span class="hidden sm:inline opacity-30">•</span>
+      <span class="hidden sm:inline">Mayfair London</span>
+      <span class="hidden md:inline opacity-30">•</span>
+      <span class="hidden md:inline">Monaco</span>
+      <span class="hidden lg:inline opacity-30">•</span>
+      <span class="hidden lg:inline">Dubai Palm</span>
+      <span class="hidden lg:inline opacity-30">•</span>
+      <span class="hidden lg:inline">Singapore</span>
+    </div>
+
+    <div class="flex items-center space-x-4 ml-auto">
+      <!-- Currency Switcher -->
+      <div class="flex items-center space-x-1.5">
+        <span class="text-gray-400">Currency:</span>
+        <select class="currency-selector bg-transparent text-gold-300 text-[11px] font-semibold focus:outline-none cursor-pointer border border-white/10 rounded px-1.5 py-0.5">
+          <option value="USD" class="bg-gray-900 text-white">USD ($)</option>
+          <option value="EUR" class="bg-gray-900 text-white">EUR (€)</option>
+          <option value="GBP" class="bg-gray-900 text-white">GBP (£)</option>
+          <option value="AED" class="bg-gray-900 text-white">AED (AED)</option>
+          <option value="SGD" class="bg-gray-900 text-white">SGD (S$)</option>
+          <option value="CHF" class="bg-gray-900 text-white">CHF (CHF)</option>
+        </select>
+      </div>
+
+      <span class="opacity-30">|</span>
+
+      <a href="tel:+18005550199" class="text-gray-300 hover:text-gold-300 transition-colors flex items-center font-medium">
+        <svg class="w-3 h-3 mr-1 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        <span class="hidden sm:inline">VIP Desk:</span> +1 (800) 555-0199
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. Architectural Glass Navigation
+       ========================================================================== -->
+  <header id="main-navbar" class="glass-nav sticky top-0 left-0 right-0 z-40 px-4 md:px-12 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Signature -->
+      <a href="#" class="group flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full border border-gold-400/50 flex items-center justify-center bg-black/40 text-gold-300 group-hover:border-gold-300 group-hover:scale-105 transition-all">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div>
+          <span class="font-grand text-xl md:text-2xl tracking-[0.18em] font-bold text-gold-gradient block leading-none">
+            L'ÉTOILE
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.3em] opacity-70 block mt-1 font-sans">
+            Private Residences
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
+        <a href="#collections-section" class="hover:text-gold-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold-400 hover:after:w-full after:transition-all">
+          Collections
+        </a>
+        <a href="#portfolio-section" class="hover:text-gold-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold-400 hover:after:w-full after:transition-all">
+          Masterpiece Estates
+        </a>
+        <a href="#spotlight-floorplan-section" class="hover:text-gold-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold-400 hover:after:w-full after:transition-all">
+          Architectural Blueprint
+        </a>
+        <a href="#calculator-section" class="hover:text-gold-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold-400 hover:after:w-full after:transition-all">
+          Investment Matrix
+        </a>
+        <a href="#private-services-section" class="hover:text-gold-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold-400 hover:after:w-full after:transition-all">
+          Private Office
+        </a>
+      </nav>
+
+      <!-- Nav Actions (Day/Night Switcher + VIP CTAs) -->
+      <div class="flex items-center space-x-3">
+        <!-- Day / Night Mode Switcher Button -->
+        <button class="theme-toggle-btn p-2 rounded-full border border-white/15 bg-white/5 hover:border-gold-400/50 hover:bg-gold-400/10 text-gold-300 transition-all flex items-center gap-1.5 text-xs px-3" title="Toggle Day/Night Mode">
+          <svg class="theme-icon-sun w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg class="theme-icon-moon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <span class="theme-text hidden sm:inline text-[11px] font-medium tracking-wider">Solarium (Light)</span>
+        </button>
+
+        <!-- Submit Property CTA (From User's Rough Reference) -->
+        <button class="submit-property-trigger hidden md:inline-flex btn-outline-gold text-xs py-2 px-4" title="List your trophy asset">
+          Submit Property
+        </button>
+
+        <!-- VIP Schedule Viewing CTA -->
+        <button class="vip-consultation-trigger btn-gold text-xs py-2 px-5 shadow-lg">
+          VIP Consultation
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-300 hover:text-gold-300 focus:outline-none" aria-label="Toggle navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl hidden flex flex-col p-8 justify-between">
+    <div class="flex justify-between items-center pb-6 border-b border-white/10">
+      <span class="font-grand text-2xl text-gold-gradient font-bold">L'ÉTOILE</span>
+      <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-col space-y-6 text-lg font-serif">
+      <a href="#collections-section" class="hover:text-gold-300 transition-colors">Collections</a>
+      <a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Masterpiece Estates</a>
+      <a href="#spotlight-floorplan-section" class="hover:text-gold-300 transition-colors">Architectural Blueprint & Daylight</a>
+      <a href="#calculator-section" class="hover:text-gold-300 transition-colors">Investment Matrix</a>
+      <a href="#private-services-section" class="hover:text-gold-300 transition-colors">Private Office Advisory</a>
+    </div>
+
+    <div class="space-y-4 pt-6 border-t border-white/10">
+      <button class="submit-property-trigger w-full btn-outline-gold py-3">Submit Property</button>
+      <button class="vip-consultation-trigger w-full btn-gold py-3">Book VIP Viewing</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       3. Cinematic Hero Section with Dynamic Day/Night Hero Crossfade
+       ========================================================================== -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-4 md:px-8 py-16">
+    <!-- Hero Dual Backgrounds with Crossfade -->
+    <div class="hero-bg-container">
+      <!-- Dark/Twilight Penthouse Hero Image -->
+      <img id="hero-img-dark" src="assets/images/hero-dark.jpg" alt="L'Étoile Night Penthouse Architecture" class="hero-bg-layer opacity-100 scale-100" />
+      
+      <!-- Light/Sunset Penthouse Hero Image -->
+      <img id="hero-img-light" src="assets/images/hero-light.jpg" alt="L'Étoile Sunset Golden Hour Penthouse Architecture" class="hero-bg-layer opacity-0 scale-100" />
+      
+      <div class="hero-overlay-gradient"></div>
+    </div>
+
+    <!-- Ambient Floating Day/Night Indicator badge in Hero Corner -->
+    <div class="absolute top-8 right-6 md:right-12 z-20 hidden md:flex items-center gap-2 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 text-xs text-white/90">
+      <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+      <span class="text-gold-300 font-mono">Live Architectural Mode:</span>
+      <button class="theme-toggle-btn underline hover:text-gold-300 transition-colors">
+        Toggle Sunset / Twilight
+      </button>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto text-center mt-6">
+      <!-- Prestige Floating Tag -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-gold-400/30 text-gold-300 text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-2xl">
+        <svg class="w-3.5 h-3.5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+        </svg>
+        <span>Curated Global Architectural Portfolio 2026</span>
+      </div>
+
+      <!-- Grand Editorial Title -->
+      <h1 class="hero-title-clamp font-grand text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white font-bold leading-[1.08] mb-6 drop-shadow-2xl">
+        ARCHITECTURAL <br class="hidden sm:inline" />
+        <span class="text-gold-gradient font-editorial italic font-normal">Mastery</span> &amp; RESIDENCES
+      </h1>
+
+      <p class="font-serif italic text-lg sm:text-xl md:text-2xl text-gray-200/90 max-w-3xl mx-auto font-light leading-relaxed mb-10 drop-shadow">
+        Transcending the boundaries of ultra-prime living. Curating iconic off-market trophy estates and sky penthouses for the world’s most discerning collectors.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <a href="#portfolio-section" class="btn-gold text-xs sm:text-sm py-3.5 px-8">
+          <span>Explore Masterpieces</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <button class="vip-consultation-trigger btn-outline-gold text-xs sm:text-sm py-3.5 px-8 bg-black/40">
+          <span>Private Acquisition Desk</span>
+        </button>
+      </div>
+
+      <!-- Live Estate Search Matrix (Glass Console) -->
+      <div class="glass-panel rounded-3xl p-4 md:p-6 max-w-4xl mx-auto text-left shadow-2xl border border-gold-400/25">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center">
+          
+          <!-- Location Input -->
+          <div class="border-b sm:border-b-0 sm:border-r border-white/10 pb-3 sm:pb-0 sm:pr-3">
+            <label class="block text-[10px] uppercase tracking-widest text-gold-300 font-semibold mb-1">
+              Destination / City
+            </label>
+            <input id="hero-search-location" type="text" placeholder="e.g. Bel Air, Paris, Monaco" class="w-full bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none font-medium" />
+          </div>
+
+          <!-- Property Classification -->
+          <div class="border-b sm:border-b-0 sm:border-r border-white/10 pb-3 sm:pb-0 sm:pr-3">
+            <label class="block text-[10px] uppercase tracking-widest text-gold-300 font-semibold mb-1">
+              Classification
+            </label>
+            <select id="hero-search-type" class="w-full bg-transparent text-sm text-white focus:outline-none cursor-pointer font-medium">
+              <option value="all" class="bg-gray-900 text-white">All Classifications</option>
+              <option value="penthouses" class="bg-gray-900 text-white">Sky Penthouses</option>
+              <option value="villas" class="bg-gray-900 text-white">Signature Mansions</option>
+              <option value="waterfront" class="bg-gray-900 text-white">Coastal Sanctuaries</option>
+              <option value="chateaux" class="bg-gray-900 text-white">Historic Châteaux</option>
+              <option value="spas" class="bg-gray-900 text-white">Wellness &amp; Spas</option>
+              <option value="commercial" class="bg-gray-900 text-white">Haute Commercial</option>
+            </select>
+          </div>
+
+          <!-- Price Range Tier -->
+          <div class="border-b sm:border-b-0 md:border-r border-white/10 pb-3 sm:pb-0 md:pr-3">
+            <label class="block text-[10px] uppercase tracking-widest text-gold-300 font-semibold mb-1">
+              Acquisition Tier
+            </label>
+            <select id="hero-search-price" class="w-full bg-transparent text-sm text-white focus:outline-none cursor-pointer font-medium">
+              <option value="all" class="bg-gray-900 text-white">Any Price Tier</option>
+              <option value="under-35m" class="bg-gray-900 text-white">&lt; $35,000,000</option>
+              <option value="35m-50m" class="bg-gray-900 text-white">$35,000,000 – $50,000,000</option>
+              <option value="50m-plus" class="bg-gray-900 text-white">&gt; $50,000,000+</option>
+            </select>
+          </div>
+
+          <!-- Search Trigger Button -->
+          <div>
+            <button id="hero-search-submit" class="w-full btn-gold py-3 text-xs tracking-wider">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <span>Search Portfolio</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. Prestige Metrics Ticker
+       ========================================================================== -->
+  <section id="prestige-metrics-ticker" class="py-12 border-y border-white/10 bg-black/20 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        
+        <div>
+          <span class="counter-value font-grand text-3xl md:text-5xl font-bold text-gold-gradient block" data-target="4.8" data-decimals="1" data-prefix="$" data-suffix="B+">
+            $0B+
+          </span>
+          <span class="text-xs uppercase tracking-widest text-gray-400 mt-2 block font-medium">
+            Portfolio Transacted
+          </span>
+        </div>
+
+        <div>
+          <span class="counter-value font-grand text-3xl md:text-5xl font-bold text-gold-gradient block" data-target="98.4" data-decimals="1" data-suffix="%">
+            0%
+          </span>
+          <span class="text-xs uppercase tracking-widest text-gray-400 mt-2 block font-medium">
+            Confidential Off-Market
+          </span>
+        </div>
+
+        <div>
+          <span class="counter-value font-grand text-3xl md:text-5xl font-bold text-gold-gradient block" data-target="38" data-decimals="0" data-suffix=" Metropolises">
+            0
+          </span>
+          <span class="text-xs uppercase tracking-widest text-gray-400 mt-2 block font-medium">
+            Global Prime Presence
+          </span>
+        </div>
+
+        <div>
+          <span class="counter-value font-grand text-3xl md:text-5xl font-bold text-gold-gradient block" data-target="150" data-decimals="0" data-prefix="" data-suffix="+ Laureates">
+            0+
+          </span>
+          <span class="text-xs uppercase tracking-widest text-gray-400 mt-2 block font-medium">
+            Pritzker &amp; Master Architects
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. Explore Signature Collections (Elevated from Rough Reference)
+       ========================================================================== -->
+  <section id="collections-section" class="py-24 px-4 md:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+          Curated Portfolios
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          EXPLORE POPULAR <span class="font-editorial italic font-normal text-gold-gradient">Categories</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-400 mx-auto mb-4"></div>
+        <p class="text-sm md:text-base opacity-75 leading-relaxed font-light">
+          Discover tailored architectural realms across the world's most coveted private enclaves and metropolitan capitals.
+        </p>
+      </div>
+
+      <!-- Categories Dynamic Grid -->
+      <div id="categories-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Reference Bottom Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+        <a href="#portfolio-section" class="btn-gold text-xs py-3.5 px-8">
+          Browse All Properties
+        </a>
+        <button class="submit-property-trigger btn-outline-gold text-xs py-3.5 px-8">
+          Submit Private Property
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. Curated Masterpiece Estates (Interactive Filterable Showcase)
+       ========================================================================== -->
+  <section id="portfolio-section" class="py-24 px-4 md:px-8 border-t border-white/10 bg-black/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+            Private Portfolio
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold">
+            Flagship <span class="font-editorial italic font-normal text-gold-gradient">Masterpieces</span>
+          </h2>
+          <p id="properties-count-label" class="text-xs text-gray-400 font-mono mt-1">
+            Showing Curated Residences
+          </p>
+        </div>
+
+        <!-- Filter Tab Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <button class="filter-tab-btn active" data-filter="all">All Realms</button>
+          <button class="filter-tab-btn" data-filter="penthouses">Sky Penthouses</button>
+          <button class="filter-tab-btn" data-filter="villas">Signature Mansions</button>
+          <button class="filter-tab-btn" data-filter="waterfront">Coastal</button>
+          <button class="filter-tab-btn" data-filter="chateaux">Châteaux</button>
+          <button class="filter-tab-btn" data-filter="spas">Wellness</button>
+          <button class="filter-tab-btn" data-filter="commercial">Commercial</button>
+        </div>
+      </div>
+
+      <!-- Properties Grid -->
+      <div id="properties-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. Spotlight: "The Grand Élysée Penthouse" & Interactive Floorplan + Daylight Simulator
+       ========================================================================== -->
+  <section id="spotlight-floorplan-section" class="py-24 px-4 md:px-8 border-t border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+          Architectural Spotlight
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          INTERACTIVE BLUEPRINT &amp; <span class="font-editorial italic font-normal text-gold-gradient">Daylight Simulator</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-400 mx-auto mb-4"></div>
+        <p class="text-sm md:text-base opacity-75 font-light">
+          Inspect the spatial proportions and observe how natural sunlight cascades across the residence from Alpine dawn to twilight nocturne.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Interactive Blueprint Viewer -->
+        <div class="lg:col-span-8 glass-panel rounded-3xl p-6 md:p-8 relative overflow-hidden">
+          
+          <!-- Blueprint Header & Daylight Controls -->
+          <div class="flex flex-wrap justify-between items-center pb-6 mb-6 border-b border-white/10 gap-4">
+            <div>
+              <h3 class="font-serif text-2xl font-bold">The Grand Élysée Duplex</h3>
+              <p class="text-xs text-gold-400 font-mono">Level 42 &bull; 9,800 Sq.Ft &bull; 360° Seine Vistas</p>
+            </div>
+
+            <!-- Daylight Presets -->
+            <div class="flex items-center gap-2">
+              <button class="daylight-preset-btn" data-preset="dawn">Dawn</button>
+              <button class="daylight-preset-btn" data-preset="noon">Noon</button>
+              <button class="daylight-preset-btn active" data-preset="sunset">Golden Hour</button>
+              <button class="daylight-preset-btn" data-preset="night">Nocturne</button>
+            </div>
+          </div>
+
+          <!-- Floorplan Canvas Area -->
+          <div class="relative w-full aspect-[16/10] bg-neutral-950/80 rounded-2xl overflow-hidden border border-white/10 shadow-inner flex items-center justify-center p-4">
+            
+            <!-- Ambient Simulation Backdrop -->
+            <div id="daylight-ambient-preview" class="absolute inset-0 transition-all duration-700 opacity-80 pointer-events-none"></div>
+
+            <!-- Directional Light Beam Overlay -->
+            <div id="daylight-sun-rays" class="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent pointer-events-none transition-all duration-700"></div>
+
+            <!-- Floorplan Architectural Vector Blueprint -->
+            <svg id="interactive-floorplan-svg" class="w-full h-full relative z-10 opacity-90 transition-all duration-500" viewBox="0 0 1000 650" fill="none" stroke="currentColor">
+              <!-- Outer Penthouse Outline (Curved & Geometric) -->
+              <path d="M 80,120 L 680,120 A 280,280 0 0,1 920,400 L 920,540 L 80,540 Z" fill="rgba(255,255,255,0.02)" stroke="rgba(212,175,55,0.6)" stroke-width="3"></path>
+              
+              <!-- Curved Terrace Outline -->
+              <path d="M 680,120 A 280,280 0 0,1 920,400 L 840,400 A 200,200 0 0,0 680,200 Z" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.8)" stroke-width="2" stroke-dasharray="6 4"></path>
+
+              <!-- Master Wing Partition -->
+              <rect x="110" y="150" width="280" height="350" rx="8" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="rgba(255,255,255,0.01)"></rect>
+              <text x="140" y="190" fill="rgba(255,255,255,0.6)" font-size="14" font-family="Plus Jakarta Sans" letter-spacing="2">MASTER SANCTUARY</text>
+              <text x="140" y="210" fill="rgba(212,175,55,0.8)" font-size="11" font-family="monospace">1,100 SQ.FT</text>
+
+              <!-- Grand Salon & Double Height Living -->
+              <rect x="420" y="260" width="280" height="240" rx="8" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="rgba(255,255,255,0.01)"></rect>
+              <text x="440" y="300" fill="rgba(255,255,255,0.6)" font-size="14" font-family="Plus Jakarta Sans" letter-spacing="2">GRAND SALON</text>
+              <text x="440" y="320" fill="rgba(212,175,55,0.8)" font-size="11" font-family="monospace">1,450 SQ.FT &bull; 6.4M CEILING</text>
+
+              <!-- Gourmet Kitchen & Dining -->
+              <rect x="420" y="150" width="230" height="90" rx="8" stroke="rgba(255,255,255,0.3)" stroke-width="2"></rect>
+              <text x="440" y="185" fill="rgba(255,255,255,0.6)" font-size="12" font-family="Plus Jakarta Sans" letter-spacing="2">GOURMET ATELIER</text>
+
+              <!-- Sunset Horizon Terrace -->
+              <text x="730" y="290" fill="rgba(212,175,55,0.9)" font-size="13" font-family="Plus Jakarta Sans" font-weight="bold" letter-spacing="1">CURVED HORIZON DECK</text>
+              <text x="730" y="310" fill="rgba(255,255,255,0.7)" font-size="11" font-family="monospace">1,820 SQ.FT</text>
+
+              <!-- Blueprint Architectural Grid Lines -->
+              <line x1="80" y1="240" x2="420" y2="240" stroke="rgba(255,255,255,0.15)" stroke-width="1"></line>
+              <line x1="260" y1="150" x2="260" y2="500" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 4"></line>
+              <circle cx="780" cy="220" r="35" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1.5" fill="rgba(56, 189, 248, 0.08)"></circle>
+              <text x="760" y="225" fill="rgba(56, 189, 248, 0.8)" font-size="10" font-family="monospace">SPA POOL</text>
+            </svg>
+
+            <!-- Hotspot Pins Interactive Layer -->
+            <div id="floorplan-hotspots-layer" class="absolute inset-0 pointer-events-auto">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Daylight Time Slider Control -->
+          <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+            <div class="flex items-center space-x-3 w-full sm:w-auto">
+              <span class="text-xs uppercase tracking-widest text-gold-300 font-semibold">Sun Path:</span>
+              <input id="daylight-time-slider" type="range" min="1" max="4" step="1" value="3" class="w-48 cursor-pointer" />
+            </div>
+
+            <div class="flex items-center space-x-4 text-xs font-mono">
+              <span id="daylight-time-label" class="text-white font-semibold">06:15 PM — Golden Hour</span>
+              <span class="opacity-40">|</span>
+              <span id="daylight-elevation-label" class="text-gold-400">18° West</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Active Hotspot Inspector Card -->
+        <div class="lg:col-span-4">
+          <div id="hotspot-details-card" class="glass-panel rounded-3xl p-6 md:p-8 border border-gold-400/30">
+            <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block mb-1">
+              Active Spatial Inspection
+            </span>
+            <h4 id="hotspot-title" class="font-serif text-2xl font-bold mb-2">
+              Curved Sunset Horizon Balcony
+            </h4>
+            <div class="flex items-center space-x-2 text-xs font-mono text-gold-300 mb-4">
+              <span id="hotspot-area">1,820 sq.ft</span>
+              <span>&bull;</span>
+              <span>Panoramic Western Exposure</span>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden aspect-[16/10] mb-4 border border-white/10 shadow-lg">
+              <img id="hotspot-image" src="assets/images/hero-light.jpg" alt="Hotspot View" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+
+            <p id="hotspot-specs" class="text-xs text-gray-300 leading-relaxed mb-6">
+              Direct Evening Light, Heated Glass Infinity Edge, Teak Decking, Integrated Sonos Marine Audio.
+            </p>
+
+            <button class="vip-consultation-trigger w-full btn-gold text-xs py-3">
+              Request Private Penthouse Dossier
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. Luxury Investment & Mortgage Amortization Matrix
+       ========================================================================== -->
+  <section id="calculator-section" class="py-24 px-4 md:px-8 border-t border-white/10 bg-black/20">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+          Financial Intelligence
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          PORTFOLIO &amp; <span class="font-editorial italic font-normal text-gold-gradient">Yield Matrix</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-400 mx-auto mb-4"></div>
+        <p class="text-sm md:text-base opacity-75 font-light">
+          Simulate acquisition structures, private banking mortgage amortization, holding yields, and 10-year capital appreciation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Input Parameters Form -->
+        <div class="lg:col-span-7 glass-panel rounded-3xl p-6 md:p-8 space-y-6">
+          <div class="flex justify-between items-center pb-4 border-b border-white/10">
+            <h3 class="font-serif text-xl font-bold">Acquisition Parameters</h3>
+            <!-- Quick Preset Tier Buttons -->
+            <div class="flex gap-1.5">
+              <button class="calc-preset-btn text-[11px] px-2.5 py-1 rounded bg-white/5 hover:bg-gold-400/20 text-gold-300 font-mono" data-price="25000000">$25M</button>
+              <button class="calc-preset-btn text-[11px] px-2.5 py-1 rounded bg-white/5 hover:bg-gold-400/20 text-gold-300 font-mono" data-price="36000000">$36M</button>
+              <button class="calc-preset-btn text-[11px] px-2.5 py-1 rounded bg-white/5 hover:bg-gold-400/20 text-gold-300 font-mono" data-price="50000000">$50M</button>
+            </div>
+          </div>
+
+          <!-- Price Slider -->
+          <div>
+            <div class="flex justify-between text-xs mb-2">
+              <span class="uppercase tracking-wider opacity-75 font-medium">Estate Valuation</span>
+              <span id="calc-price-display" class="font-serif text-lg font-bold text-gold-300">$36.00M</span>
+            </div>
+            <input id="calc-price-slider" type="range" min="5000000" max="100000000" step="1000000" value="36000000" class="w-full" />
+            <div class="flex justify-between text-[10px] font-mono opacity-50 mt-1">
+              <span>$5M</span>
+              <span>$50M</span>
+              <span>$100M+</span>
+            </div>
+          </div>
+
+          <!-- Down Payment Slider -->
+          <div>
+            <div class="flex justify-between text-xs mb-2">
+              <span class="uppercase tracking-wider opacity-75 font-medium">Equity Down Payment</span>
+              <span class="font-mono text-sm text-gold-300">
+                <span id="calc-down-display">25%</span>
+                <span id="calc-down-amount" class="opacity-70 ml-1">($9.00M)</span>
+              </span>
+            </div>
+            <input id="calc-down-slider" type="range" min="10" max="60" step="5" value="25" class="w-full" />
+          </div>
+
+          <!-- Two Column Inputs -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Loan Term -->
+            <div>
+              <label class="block text-xs uppercase tracking-wider opacity-75 font-medium mb-2">Private Loan Term</label>
+              <select id="calc-term-select" class="w-full bg-neutral-900/80 border border-white/15 rounded-xl p-3 text-sm text-white focus:outline-none">
+                <option value="15">15 Years (Fixed Private Rate)</option>
+                <option value="20">20 Years</option>
+                <option value="30" selected>30 Years (Jumbo Portfolio)</option>
+              </select>
+            </div>
+
+            <!-- Interest Rate -->
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="uppercase tracking-wider opacity-75 font-medium">Interest Rate</span>
+                <span id="calc-interest-display" class="font-mono text-gold-300">4.80%</span>
+              </div>
+              <input id="calc-interest-slider" type="range" min="2.5" max="8.0" step="0.1" value="4.8" class="w-full" />
+            </div>
+          </div>
+
+          <!-- Target Yield -->
+          <div>
+            <div class="flex justify-between text-xs mb-2">
+              <span class="uppercase tracking-wider opacity-75 font-medium">Projected Gross Yield</span>
+              <span id="calc-yield-display" class="font-mono text-gold-300">6.2%</span>
+            </div>
+            <input id="calc-yield-slider" type="range" min="3.0" max="12.0" step="0.2" value="6.2" class="w-full" />
+          </div>
+        </div>
+
+        <!-- Output Dashboard -->
+        <div class="lg:col-span-5 glass-panel rounded-3xl p-6 md:p-8 space-y-6 border border-gold-400/30">
+          <h3 class="font-serif text-xl font-bold pb-3 border-b border-white/10">Cashflow &amp; Valuation Forecast</h3>
+
+          <div class="space-y-4">
+            <div class="flex justify-between items-center py-2 border-b border-white/5">
+              <span class="text-xs opacity-75">Monthly Principal &amp; Interest</span>
+              <span id="calc-monthly-amort" class="font-serif text-base font-bold text-white">$141,675</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-white/5">
+              <span class="text-xs opacity-75">Monthly Holding, Tax &amp; HOA</span>
+              <span id="calc-monthly-tax" class="font-serif text-base font-bold text-white">$25,500</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-white/5 bg-white/5 px-3 rounded-xl">
+              <span class="text-xs font-semibold uppercase tracking-wider text-gold-300">Total Monthly Commitment</span>
+              <span id="calc-monthly-total" class="font-serif text-lg font-bold text-gold-gradient">$167,175</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-white/5">
+              <span class="text-xs opacity-75">Gross Rental Inflow / Mo</span>
+              <span id="calc-monthly-rental" class="font-serif text-base font-bold text-emerald-400">$186,000</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 bg-neutral-900/60 px-3 rounded-xl border border-white/10">
+              <span class="text-xs font-semibold uppercase tracking-wider">Net Monthly Yield Spread</span>
+              <span id="calc-net-cashflow" class="font-serif text-lg font-bold text-emerald-400">+$18,825</span>
+            </div>
+          </div>
+
+          <!-- Comparison Visualizer Bars -->
+          <div class="space-y-2 pt-2">
+            <div class="flex justify-between text-[11px] font-mono">
+              <span class="text-gray-400">Commitment vs Inflow</span>
+            </div>
+            <div class="h-2 w-full bg-neutral-800 rounded-full overflow-hidden flex gap-1">
+              <div id="calc-bar-mortgage" class="bg-gold-500 transition-all duration-300" style="width: 48%"></div>
+              <div id="calc-bar-rental" class="bg-emerald-500 transition-all duration-300" style="width: 52%"></div>
+            </div>
+          </div>
+
+          <!-- 10 Year Future Value Callout -->
+          <div class="p-4 rounded-2xl bg-gradient-to-br from-gold-500/15 via-gold-500/5 to-transparent border border-gold-400/20">
+            <span class="text-[10px] uppercase tracking-widest text-gold-300 font-semibold block mb-1">
+              10-Year Compounded Valuation Projection (@6.5% p.a.)
+            </span>
+            <span id="calc-appreciation-10yr" class="font-grand text-2xl md:text-3xl font-bold text-gold-gradient">
+              $67.58M
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. The Private Office & Bespoke Client Services
+       ========================================================================== -->
+  <section id="private-services-section" class="py-24 px-4 md:px-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+          White-Glove Advisory
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          THE PRIVATE <span class="font-editorial italic font-normal text-gold-gradient">Office</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-400 mx-auto mb-4"></div>
+        <p class="text-sm md:text-base opacity-75 font-light">
+          Discreet transactional stewardship, off-market asset sourcing, and sovereign family office representation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass-panel rounded-3xl p-8 transition-all hover:-translate-y-2 border border-white/10 hover:border-gold-400/50">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-center text-gold-300 mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3">Off-Market Acquisitions</h3>
+          <p class="text-xs opacity-75 leading-relaxed">
+            Gain confidential access to world-class estates, private islands, and unlisted penthouses traded strictly under non-disclosure agreements.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 transition-all hover:-translate-y-2 border border-white/10 hover:border-gold-400/50">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-center text-gold-300 mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3">Architectural Advisory</h3>
+          <p class="text-xs opacity-75 leading-relaxed">
+            Direct collaboration with Pritzker-winning studios, master heritage restorers, and leading landscape biophilic innovators worldwide.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 transition-all hover:-translate-y-2 border border-white/10 hover:border-gold-400/50">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-center text-gold-300 mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3">Sovereign Asset Protection</h3>
+          <p class="text-xs opacity-75 leading-relaxed">
+            Structuring cross-border luxury holding vehicles, private trust transfers, and tax-efficient real estate legacy transitions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. VIP Client Testimonials & Press Accolades
+       ========================================================================== -->
+  <section class="py-20 px-4 md:px-8 border-t border-white/10 bg-black/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-2">
+            Discreet Accolades
+          </span>
+          <h3 class="font-serif text-3xl md:text-4xl font-bold mb-6 leading-tight">
+            "An extraordinary standard of curation, absolute privacy, and architectural mastery."
+          </h3>
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-full border border-gold-400/40 overflow-hidden bg-neutral-800">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Client Portrait" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="font-serif text-base font-bold block">Lady Genevieve Vance-Montagu</span>
+              <span class="text-xs text-gold-300 font-mono">Private Family Office, Mayfair</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 text-center border-l md:border-white/10 md:pl-12">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <span class="font-grand text-xl font-bold text-gold-300 block mb-1">ARCHITECTURAL DIGEST</span>
+            <span class="text-[11px] opacity-70">"The premier brokerage redefining ultra-prime residential art."</span>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <span class="font-grand text-xl font-bold text-gold-300 block mb-1">ROBB REPORT</span>
+            <span class="text-[11px] opacity-70">"Best Luxury Real Estate Advisory Global 2025."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. Flagship Footer
+       ========================================================================== -->
+  <footer class="border-t border-white/15 bg-neutral-950 text-gray-400 py-16 px-4 md:px-12 relative z-30">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+      
+      <!-- Brand column -->
+      <div class="lg:col-span-2 space-y-4">
+        <span class="font-grand text-2xl text-gold-gradient font-bold tracking-widest block">
+          L'ÉTOILE
+        </span>
+        <p class="text-xs leading-relaxed max-w-sm font-light">
+          L'Étoile Private Residences is the world's preeminent architectural real estate advisory, connecting visionary collectors with trophy estates of timeless distinction.
+        </p>
+        <div class="pt-2 flex items-center space-x-3">
+          <span class="text-xs text-gold-400 font-mono">Theme:</span>
+          <button class="theme-toggle-btn text-xs px-3 py-1 rounded-full border border-white/10 hover:border-gold-400 text-white">
+            Switch Day/Night
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Nav -->
+      <div>
+        <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Portfolio</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Sky Penthouses</a></li>
+          <li><a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Signature Mansions</a></li>
+          <li><a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Coastal Sanctuaries</a></li>
+          <li><a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Historic Châteaux</a></li>
+          <li><a href="#portfolio-section" class="hover:text-gold-300 transition-colors">Wellness Compounds</a></li>
+        </ul>
+      </div>
+
+      <!-- Global Desks -->
+      <div>
+        <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Global Desks</h4>
+        <ul class="space-y-2 text-xs">
+          <li><span class="text-white">Beverly Hills:</span> Rodeo Drive</li>
+          <li><span class="text-white">London:</span> Grosvenor Square, Mayfair</li>
+          <li><span class="text-white">Paris:</span> Avenue Montaigne</li>
+          <li><span class="text-white">Dubai:</span> DIFC Gate Village</li>
+          <li><span class="text-white">Monaco:</span> Place du Casino</li>
+        </ul>
+      </div>
+
+      <!-- Private Dossier Newsletter -->
+      <div>
+        <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Private Dossier</h4>
+        <p class="text-xs mb-3">Subscribe for unlisted off-market property releases.</p>
+        <form onsubmit="event.preventDefault(); showToast('Your email has been added to our Confidential Dossier Distribution.'); this.reset();" class="space-y-2">
+          <input type="email" required placeholder="name@domain.com" class="w-full bg-neutral-900 border border-white/15 rounded-lg px-3 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          <button type="submit" class="w-full btn-gold text-[11px] py-2">
+            Request Private Access
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-[11px] text-gray-500 gap-4">
+      <p>© 2026 L'Étoile Real Estate &amp; Private Residences. All Rights Reserved. Equal Housing Opportunity.</p>
+      <div class="flex space-x-6">
+        <a href="#" class="hover:text-gold-300">Confidentiality &amp; NDA</a>
+        <a href="#" class="hover:text-gold-300">Privacy Policy</a>
+        <a href="#" class="hover:text-gold-300">Terms of Representation</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       12. Floating Quick Actions & Back to Top Button
+       ========================================================================== -->
+  <div class="fixed bottom-6 left-6 z-40">
+    <button class="vip-consultation-trigger shadow-2xl flex items-center space-x-2 bg-black/80 hover:bg-gold-500 text-white hover:text-black transition-all border border-gold-400/40 rounded-full px-4 py-2.5 backdrop-blur-xl text-xs font-semibold tracking-wider uppercase">
+      <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+      <span>VIP Concierge</span>
+    </button>
+  </div>
+
+  <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-black/80 hover:bg-gold-400 hover:text-black text-gold-300 border border-gold-400/40 backdrop-blur-xl shadow-2xl opacity-0 pointer-events-none transition-all duration-300" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       13. MODAL: Property Quick View Dossier Modal
+       ========================================================================== -->
+  <div id="property-detail-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-4 md:p-8 overflow-y-auto">
+    <div class="glass-panel max-w-5xl w-full rounded-3xl p-6 md:p-8 relative max-h-[90vh] overflow-y-auto border border-gold-400/30">
+      
+      <button class="modal-close-btn absolute top-6 right-6 p-2 text-gray-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Gallery column -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="rounded-2xl overflow-hidden aspect-[16/10] border border-white/10 shadow-2xl">
+            <img id="modal-prop-main-img" src="" alt="" class="w-full h-full object-cover" />
+          </div>
+          <!-- Thumbnail buttons -->
+          <div id="modal-prop-gallery-thumbs" class="grid grid-cols-4 gap-2"></div>
+        </div>
+
+        <!-- Details column -->
+        <div class="lg:col-span-5 space-y-4">
+          <div>
+            <span id="modal-prop-location" class="text-xs text-gold-400 font-mono block mb-1"></span>
+            <h3 id="modal-prop-title" class="font-serif text-2xl md:text-3xl font-bold mb-1"></h3>
+            <p id="modal-prop-tagline" class="text-xs opacity-75 italic font-serif"></p>
+          </div>
+
+          <div class="py-3 border-y border-white/10 flex justify-between items-baseline">
+            <span class="text-xs uppercase tracking-widest opacity-60">Price</span>
+            <span id="modal-prop-price" class="font-serif text-3xl font-bold text-gold-gradient"></span>
+          </div>
+
+          <!-- Specs -->
+          <div class="grid grid-cols-3 gap-2 text-center py-2 bg-white/5 rounded-xl text-xs font-mono">
+            <div>
+              <span id="modal-prop-beds" class="block font-bold text-gold-300"></span>
+              <span class="text-[10px] opacity-60">Suites</span>
+            </div>
+            <div>
+              <span id="modal-prop-baths" class="block font-bold text-gold-300"></span>
+              <span class="text-[10px] opacity-60">Baths</span>
+            </div>
+            <div>
+              <span id="modal-prop-sqft" class="block font-bold text-gold-300"></span>
+              <span class="text-[10px] opacity-60">Interior</span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p id="modal-prop-desc" class="text-xs opacity-80 leading-relaxed"></p>
+
+          <!-- Key Amenities Checklist -->
+          <div>
+            <span class="text-[11px] uppercase tracking-wider text-gold-300 font-semibold block mb-2">Master Features</span>
+            <ul id="modal-prop-features" class="space-y-1.5"></ul>
+          </div>
+
+          <div class="pt-4 flex gap-3">
+            <button id="modal-prop-book-btn" class="w-full btn-gold text-xs py-3">
+              Schedule Confidential Tour
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       14. MODAL: VIP Confidential Viewing & Acquisition Modal
+       ========================================================================== -->
+  <div id="vip-viewing-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel max-w-xl w-full rounded-3xl p-6 md:p-8 relative border border-gold-400/40">
+      
+      <button class="modal-close-btn absolute top-6 right-6 p-2 text-gray-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-1">
+        Private Acquisition Desk
+      </span>
+      <h3 class="font-serif text-2xl font-bold mb-2">Schedule VIP Consultation</h3>
+      <p class="text-xs opacity-75 mb-6">
+        All inquiries are handled under strict attorney-client style non-disclosure agreements by our Senior Partners.
+      </p>
+
+      <form id="vip-viewing-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Estate of Interest</label>
+          <select id="vip-form-property" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white focus:outline-none focus:border-gold-400"></select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Full Legal Name / Family Office</label>
+            <input type="text" required placeholder="e.g. Vance Family Office" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Direct Telephone / Signal</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Confidential Email</label>
+            <input type="email" required placeholder="client@private.com" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Preferred Viewing Date</label>
+            <input type="date" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white focus:outline-none focus:border-gold-400" />
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2 pt-2">
+          <input type="checkbox" id="vip-nda-checkbox" checked class="accent-gold-400 rounded" />
+          <label for="vip-nda-checkbox" class="opacity-80">Request reciprocal NDA prior to sharing architectural dossiers</label>
+        </div>
+
+        <button type="submit" class="w-full btn-gold text-xs py-3.5 mt-4">
+          Transmit Confidential Request
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       15. MODAL: Submit Property / Off-Market Evaluation Modal (From Reference CTA)
+       ========================================================================== -->
+  <div id="submit-property-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel max-w-xl w-full rounded-3xl p-6 md:p-8 relative border border-gold-400/40">
+      
+      <button class="modal-close-btn absolute top-6 right-6 p-2 text-gray-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-400 block mb-1">
+        Estate Representation
+      </span>
+      <h3 class="font-serif text-2xl font-bold mb-2">Submit Property for Curation</h3>
+      <p class="text-xs opacity-75 mb-6">
+        Submit your estate credentials for evaluation by our Confidential Acquisitions Committee.
+      </p>
+
+      <form id="submit-property-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Estate Location / Address</label>
+          <input type="text" required placeholder="e.g. 1004 Billionaire Row, Bel Air" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Property Classification</label>
+            <select class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white focus:outline-none focus:border-gold-400">
+              <option>Sky Penthouse</option>
+              <option>Signature Villa / Mansion</option>
+              <option>Waterfront Sanctuary</option>
+              <option>Historic Château</option>
+              <option>Haute Commercial / Spa</option>
+            </select>
+          </div>
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Estimated Valuation ($ USD)</label>
+            <input type="text" placeholder="e.g. $40,000,000" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Representative Name</label>
+            <input type="text" required placeholder="Owner or Legal Counsel" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+          <div>
+            <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Confidential Phone / Signal</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block uppercase tracking-wider font-semibold opacity-75 mb-1">Architectural Highlights</label>
+          <textarea rows="3" placeholder="Describe the architect, view panoramas, custom finishes..." class="w-full bg-neutral-900 border border-white/15 rounded-xl p-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400"></textarea>
+        </div>
+
+        <button type="submit" class="w-full btn-gold text-xs py-3.5 mt-4">
+          Submit Dossier for Representation
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/properties-data.js"></script>
+  <script src="js/floorplan.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

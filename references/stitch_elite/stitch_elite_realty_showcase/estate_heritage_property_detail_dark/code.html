@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Oura Residence - BRP Properties</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f7f9fe",
+                    "secondary-fixed": "#e2e2e5",
+                    "surface-bright": "#f7f9fe",
+                    "on-primary-fixed": "#261900",
+                    "primary-fixed-dim": "#e9c176",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "outline-variant": "#d1c5b4",
+                    "outline": "#7f7667",
+                    "on-secondary-container": "#636467",
+                    "secondary-container": "#e2e2e5",
+                    "secondary": "#5d5e61",
+                    "on-primary-container": "#4e3700",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e4e2dd",
+                    "on-background": "#191c1f",
+                    "on-tertiary-container": "#3b3b38",
+                    "primary": "#775a19",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dade",
+                    "tertiary": "#5e5e5b",
+                    "surface-container-highest": "#e0e2e7",
+                    "surface-container": "#eceef2",
+                    "surface-tint": "#775a19",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "inverse-on-surface": "#eff1f5",
+                    "primary-fixed": "#ffdea5",
+                    "primary-container": "#c5a059",
+                    "surface-variant": "#e0e2e7",
+                    "inverse-surface": "#2d3134",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f7f9fe",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#a6a5a1",
+                    "on-surface": "#191c1f",
+                    "inverse-primary": "#e9c176",
+                    "secondary-fixed-dim": "#c6c6c9",
+                    "on-secondary-fixed": "#1a1c1e",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e8ed",
+                    "on-surface-variant": "#4e4639",
+                    "surface-container-low": "#f2f4f8",
+                    "on-secondary-fixed-variant": "#454749"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "72px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Custom styles for specific dark mode glassmorphism needs if required beyond tailwind */
+        .glass-dark {
+            background: rgba(45, 49, 52, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface dark:bg-inverse-surface text-on-surface dark:text-surface-container-lowest antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-[80px]">
+<a class="font-headline-md text-headline-md text-on-background dark:text-surface-container-lowest tracking-tight" href="#">BRP Properties</a>
+<div class="hidden md:flex space-x-gutter items-center">
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Services</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-primary-fixed-dim border-b border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center">
+<button aria-label="Toggle Dark Mode" class="p-2 text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</button>
+<button class="md:hidden ml-4 p-2 text-on-surface dark:text-surface-container-lowest">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Gallery Section -->
+<header class="relative w-full h-[80vh] min-h-[600px] mt-[80px] overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A breathtaking night view of a modern luxury estate, The Oura Residence, nestled in the hills. The house features expansive glass walls glowing with warm interior light, a large infinity pool reflecting the illuminated exterior, and sophisticated dark grey stone and wood architecture. The scene is set against a deep blue, starry night sky, conveying a sense of serene, high-end exclusivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMvwfHNld90-WWIEhBADESK0rF35yI5-bd3IWQnrjtvJPrZnBGCWK0ftpIt_cOMCO1RK9o28-i_ijN-QMq7P4dP5JY2S4bqtdz9SUMjjqD9DtGhTZXtpq-CQG6CUpu9Y8b-PnwNvDOJHChJeWB8DNJfy0YLVZ1uUiaSdKyrCc4ave4sP8EHGDGiHtEVvAMVfRjKiIh9tIMqerq2RF1ubm-eYhAtA3AYwHFwXK-4_Fu58jr-vlo4Ga1_BZuUn4pRGNiLg">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 w-full px-margin-mobile md:px-margin-desktop pb-gutter max-w-container-max mx-auto flex items-end">
+<div class="glass-dark p-6 md:p-8 rounded-none max-w-2xl transform translate-y-6 opacity-0 animate-[slideUp_0.8s_ease-out_forwards]">
+<span class="inline-block px-3 py-1 mb-4 border border-primary-fixed-dim text-primary-fixed-dim font-label-sm text-label-sm uppercase tracking-widest">For Sale</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface-container-lowest mb-2">The Oura Residence</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-tertiary-fixed-dim">A modern masterpiece redefining luxury living.</p>
+</div>
+</div>
+</header>
+<!-- Property Specs Bar -->
+<section class="w-full bg-inverse-surface border-y border-outline-variant/10 z-10 relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<div class="flex flex-wrap items-center justify-between gap-6 font-label-sm text-label-sm text-tertiary-fixed-dim">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">bed</span>
+<span class="">4 BHK</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant/20"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">straighten</span>
+<span class="">5,500 SQFT</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant/20"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">location_on</span>
+<span class="">Address Upon Request</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant/20"></div>
+<div class="flex items-center gap-2 text-surface-container-lowest text-lg">
+<span class="">₹12.5 Cr</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-margin-desktop">
+<!-- Left Column: Description & Narrative -->
+<div class="lg:col-span-7 space-y-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-surface-container-lowest mb-6">Property Description</h2>
+<div class="space-y-6 font-body-md text-body-md text-tertiary-fixed-dim leading-relaxed">
+<p class="">
+                            A masterpiece of modern architectural design, this estate redefines luxury living. Set upon expansive grounds, the property offers an unparalleled level of privacy and sophistication. Every detail has been meticulously curated, from the imported Italian marble flooring to the custom-milled cabinetry.
+                        </p>
+<p class="">
+                            The open-concept living spaces flow seamlessly into the outdoor entertaining areas, creating a perfect harmony between interior comfort and the natural surroundings. This is more than a home; it is a legacy property designed for the most discerning buyer.
+                        </p>
+</div>
+</div>
+<div class="glass-dark p-8 border border-outline-variant/10">
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-6">Curated Amenities</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 font-body-md text-body-md text-tertiary-fixed-dim">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">pool</span> Infinity Pool
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">wine_bar</span> Temperature-Controlled Wine Cellar
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">fitness_center</span> Private Gymnasium
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">directions_car</span> 4-Car Garage
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">smart_toy</span> Smart Home Integration
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">nature</span> Landscaped Gardens
+                        </li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Agent & Inquiry Form -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Listing Agent Profile -->
+<div class="glass-dark p-8 border border-outline-variant/10">
+<h3 class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-widest mb-6">Listing Agent</h3>
+<div class="flex items-start gap-6">
+<img class="w-20 h-20 rounded-full object-cover border-2 border-primary-fixed-dim/30" data-alt="Professional portrait of Don White, a Senior Partner real estate agent. He is wearing a tailored charcoal suit and tie, smiling confidently. The background is a luxurious modern apartment with large windows overlooking a city skyline at golden hour, conveying trust and high-end expertise." src="https://lh3.googleusercontent.com/aida/AEtjO1UvCXOluG0lBRmrjeIcUXt2YYNZf4sdGuV-D_AmlvCFZQ4cF3JTJlA_xWckL0edSqebIoqXSTwxg5BjMiH425PlyviASfP_lg9j07Rgu31_UGJeAci1CgS4lxJ59znpw9kvt0TLKO5NUwghSwwfMUyCYa5mFZFYhHw_WNQfSfzHUjewxec3MjTIattIQPR9JYwxZYDWQ1c6gB4CI0qwZUoHoGDEqW3cDlRuI-73H2Tv6vVJgM4YEAxO1CE">
+<div>
+<h4 class="font-headline-md text-headline-md text-surface-container-lowest">Don White</h4>
+<p class="font-label-sm text-label-sm text-primary-fixed-dim mb-4">Senior Partner</p>
+<div class="space-y-2 font-body-md text-body-md text-tertiary-fixed-dim">
+<a class="flex items-center gap-2 hover:text-primary-fixed-dim transition-colors" href="mailto:don.white@estateheritage.com">
+<span class="material-symbols-outlined text-[18px]">mail</span> don.white@estateheritage.com
+                                </a>
+<a class="flex items-center gap-2 hover:text-primary-fixed-dim transition-colors" href="tel:+15550123456">
+<span class="material-symbols-outlined text-[18px]">phone</span> +1 (555) 012-3456
+                                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="glass-dark p-8 border border-outline-variant/10">
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-6">Inquire About Property</h3>
+<form class="space-y-6">
+<div>
+<label class="sr-only" for="name">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-surface-container-lowest font-body-md py-3 focus:ring-0 focus:border-primary-fixed-dim transition-colors placeholder:text-tertiary-fixed-dim/50 rounded-none" id="name" name="name" placeholder="Full Name" type="text">
+</div>
+<div>
+<label class="sr-only" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-surface-container-lowest font-body-md py-3 focus:ring-0 focus:border-primary-fixed-dim transition-colors placeholder:text-tertiary-fixed-dim/50 rounded-none" id="email" name="email" placeholder="Email Address" type="email">
+</div>
+<div>
+<label class="sr-only" for="phone">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-surface-container-lowest font-body-md py-3 focus:ring-0 focus:border-primary-fixed-dim transition-colors placeholder:text-tertiary-fixed-dim/50 rounded-none" id="phone" name="phone" placeholder="Phone Number" type="tel">
+</div>
+<div>
+<label class="sr-only" for="message">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-surface-container-lowest font-body-md py-3 focus:ring-0 focus:border-primary-fixed-dim transition-colors placeholder:text-tertiary-fixed-dim/50 resize-none rounded-none" id="message" name="message" placeholder="I am interested in The Oura Residence..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-sm text-label-sm py-4 transition-colors duration-300 rounded-none uppercase tracking-widest mt-4" type="submit">
+                            Send Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-outline/10 dark:border-outline-variant/10 bg-surface dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter max-w-container-max mx-auto gap-unit">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-container-lowest">BRP Properties</div>
+<div class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant text-center md:text-left">© 2024 BRP Properties. All Rights Reserved. Member of the Luxury Real Estate Guild.</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(2rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+
+</body></html>

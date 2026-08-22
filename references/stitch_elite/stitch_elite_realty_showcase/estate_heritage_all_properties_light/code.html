@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Collection - Estate Heritage</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f7f9fe",
+                        "on-surface": "#191c1f",
+                        "tertiary-container": "#a6a5a1",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#5d5e61",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eceef2",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#c5a059",
+                        "surface-container-highest": "#e0e2e7",
+                        "surface-variant": "#e0e2e7",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2d3134",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#5e5e5b",
+                        "surface-tint": "#775a19",
+                        "on-primary-fixed": "#261900",
+                        "surface-container-low": "#f2f4f8",
+                        "secondary-fixed": "#e2e2e5",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-container": "#4e3700",
+                        "on-secondary-container": "#636467",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e4e2dd",
+                        "outline-variant": "#d1c5b4",
+                        "on-tertiary-container": "#3b3b38",
+                        "primary": "#775a19",
+                        "background": "#f7f9fe",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "surface-dim": "#d8dade",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "inverse-primary": "#e9c176",
+                        "surface-container-high": "#e6e8ed",
+                        "primary-fixed": "#ffdea5",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "outline": "#7f7667",
+                        "inverse-on-surface": "#eff1f5",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "surface": "#f7f9fe",
+                        "secondary-container": "#e2e2e5",
+                        "on-background": "#191c1f",
+                        "on-surface-variant": "#4e4639",
+                        "on-tertiary-fixed": "#1b1c19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Utilities */
+        .glass-panel {
+            background: rgba(247, 249, 254, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .text-outline-subtle {
+            border: 1px solid rgba(25, 28, 31, 0.1);
+        }
+        .card-hover-shadow:hover {
+            box-shadow: 0px 10px 30px rgba(197, 160, 89, 0.08);
+            transform: translateY(-2px);
+        }
+        .property-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-surface/80 backdrop-blur-md border-b border-on-surface/10 dark:border-white/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-display-lg text-headline-md tracking-tight text-on-surface dark:text-inverse-on-surface" href="#">
+                Estate Heritage
+            </a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary dark:text-primary-fixed-dim border-b border-primary dark:border-primary-fixed-dim pb-1 font-label-sm text-label-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 opacity-80 transition-opacity" href="#">Collections</a>
+<a class="text-on-surface dark:text-surface-variant font-label-sm text-label-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface dark:text-surface-variant font-label-sm text-label-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface dark:text-surface-variant font-label-sm text-label-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Contact</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-16 text-center md:text-left">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Property Collection</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A curated selection of extraordinary residences, representing the pinnacle of architectural excellence and quiet luxury.</p>
+</section>
+<!-- Filter Bar -->
+<section class="mb-12 sticky top-[80px] z-40 bg-surface/95 backdrop-blur-sm py-4 border-y border-outline-variant/30 flex flex-wrap gap-4 items-center justify-between">
+<div class="flex flex-wrap gap-6 items-center w-full md:w-auto">
+<!-- Type Filter -->
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors pb-1 border-b border-transparent group-hover:border-primary">
+<span>TYPE</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Price Filter -->
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors pb-1 border-b border-transparent group-hover:border-primary">
+<span>PRICE RANGE</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Location Filter -->
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors pb-1 border-b border-transparent group-hover:border-primary">
+<span>LOCATION</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary">32 PROPERTIES FOUND</span>
+</div>
+</section>
+<!-- Property Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="property-card flex flex-col gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-none border border-outline-variant/20">
+<img alt="Luxury living room with natural light" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4BvywzRSfNFrx0hahcfH99mJ2x1E7xyanek_Db2W_rN7y31LMVWHxB0eucfxSNB42kr1tSWZeL19nhHtvuKiB62n1LhRWbhLnpWeou4bSUHg_mMSbGuPK4lWrMHDf6KsnINCaOZGt7Xm6vciRCBnGlKxDGud7rZUDoDKFXWVXl2n4Wy8AYSqiafGGoKbGWyskXaK5pYc0Y3PyiQ9t9YE3eMGS7gdx-dzHfIZ8aswhg3fBb1692yloLuAJYaSgc2NsEw"/>
+<div class="absolute top-4 right-4 bg-surface px-3 py-1 border border-outline-variant">
+<span class="font-label-sm text-label-sm tracking-widest text-primary">FOR SALE</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">The Oura Residence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Address upon request</p>
+<div class="flex items-center gap-4 mt-2 py-3 border-y border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="bed">bed</span>
+<span class="font-label-sm text-label-sm">4 BHK</span>
+</div>
+<div class="w-px h-4 bg-outline-variant/50"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="square_foot">square_foot</span>
+<span class="font-label-sm text-label-sm">5,500 SQFT</span>
+</div>
+</div>
+<div class="mt-2 font-headline-md text-headline-md text-on-surface">12.5 Cr</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="property-card flex flex-col gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-none border border-outline-variant/20">
+<img alt="Modern architectural exterior with pool at dusk" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzbrrJKEEyLO2FDya_LeGqVcjWXuANOLUhmAhD5BOHL6jT7lpVDyZ7mjCWKY1hNRzW6-oO8-7_NpHLTWzrd5eV_Gbj5xLE1_MXuz9ATDQw7YNMmy_3ltl8c52YePMXk2b0bFMcUzTw2_637rYOyaMmXTujGd_infq5JISHeAo80NHD9zs7MOA1-e5qJUTiEJp-pGsaXzyfkumE23l5hKBAvvAPc3IOu7tu73a0OkQTe1mrz1vMQLYZ5igqzHb-o0ORA"/>
+<div class="absolute top-4 right-4 bg-surface px-3 py-1 border border-outline-variant">
+<span class="font-label-sm text-label-sm tracking-widest text-primary">FOR SALE</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Lumina Heights</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Banjara Hills, Hyderabad</p>
+<div class="flex items-center gap-4 mt-2 py-3 border-y border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="bed">bed</span>
+<span class="font-label-sm text-label-sm">5 BHK</span>
+</div>
+<div class="w-px h-4 bg-outline-variant/50"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="square_foot">square_foot</span>
+<span class="font-label-sm text-label-sm">7,200 SQFT</span>
+</div>
+</div>
+<div class="mt-2 font-headline-md text-headline-md text-on-surface">18.0 Cr</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="property-card flex flex-col gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-none border border-outline-variant/20">
+<img alt="Elegant hallway with marble floors and soft lighting" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKmGf2ZNow7rF8pfm7neNxY3gHIa5gdGjRtktcLOrwChDWhhd9jInWm2GAaWZvvfGPKBqByC9KH7S89_7t4HbMsAA2uckosZKkOrPApGIiQlFfdlZE8AcSo4zlkBfJS3LuZ1rXPZ15GCdbSDmK-Tx19LZ0yFuGzo8ESYBKL5EwOqYIPKtcmMkBbVZcwOxgkVSdbh67Y8ylkD8zbW82Xf_h9dS4K_0Gi7q6hlawUhePZWg8sLt7tw_3un3_vOWQ7aWXsA"/>
+<div class="absolute top-4 right-4 bg-on-surface px-3 py-1 border border-on-surface">
+<span class="font-label-sm text-label-sm tracking-widest text-surface">FOR RENT</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">The Heritage Penthouse</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Address upon request</p>
+<div class="flex items-center gap-4 mt-2 py-3 border-y border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="bed">bed</span>
+<span class="font-label-sm text-label-sm">3 BHK</span>
+</div>
+<div class="w-px h-4 bg-outline-variant/50"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="square_foot">square_foot</span>
+<span class="font-label-sm text-label-sm">3,800 SQFT</span>
+</div>
+</div>
+<div class="mt-2 font-headline-md text-headline-md text-on-surface">₹4.5L / mo</div>
+</div>
+</article>
+</section>
+<!-- Load More Action -->
+<div class="mt-16 flex justify-center">
+<button class="border border-on-surface bg-transparent text-on-surface px-8 py-3 font-label-sm text-label-sm hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-all duration-300">
+                DISCOVER MORE
+            </button>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-section-gap bg-surface-container-low dark:bg-inverse-surface border-t border-surface-container dark:border-on-surface mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="font-display-lg text-headline-md text-on-surface dark:text-inverse-on-surface">
+                    Estate Heritage
+                </div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                    Curating quiet luxury and architectural brilliance for the discerning few.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface font-bold mb-2">Company</span>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="#">Heritage Preservation</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="#">Contact Us</a>
+</div>
+<!-- Contact info -->
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface font-bold mb-2">Inquiries</span>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="mailto:concierge@estateheritage.com">concierge@estateheritage.com</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors cursor-pointer" href="tel:+918000000000">+91 800 000 0000</a>
+</div>
+<!-- Copyright -->
+<div class="flex flex-col gap-4 lg:items-end justify-end">
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                    © 2024 Estate Heritage. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

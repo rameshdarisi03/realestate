@@ -1,0 +1,340 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Oura Residence - Estate Heritage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fe",
+                        "secondary-fixed": "#e2e2e5",
+                        "surface-bright": "#f7f9fe",
+                        "on-primary-fixed": "#261900",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "outline-variant": "#d1c5b4",
+                        "outline": "#7f7667",
+                        "on-secondary-container": "#636467",
+                        "secondary-container": "#e2e2e5",
+                        "secondary": "#5d5e61",
+                        "on-primary-container": "#4e3700",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e4e2dd",
+                        "on-background": "#191c1f",
+                        "on-tertiary-container": "#3b3b38",
+                        "primary": "#775a19",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dade",
+                        "tertiary": "#5e5e5b",
+                        "surface-container-highest": "#e0e2e7",
+                        "surface-container": "#eceef2",
+                        "surface-tint": "#775a19",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "inverse-on-surface": "#eff1f5",
+                        "primary-fixed": "#ffdea5",
+                        "primary-container": "#c5a059",
+                        "surface-variant": "#e0e2e7",
+                        "inverse-surface": "#2d3134",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7f9fe",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#a6a5a1",
+                        "on-surface": "#191c1f",
+                        "inverse-primary": "#e9c176",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e6e8ed",
+                        "on-surface-variant": "#4e4639",
+                        "surface-container-low": "#f2f4f8",
+                        "on-secondary-fixed-variant": "#454749"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .text-shadow-subtle {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto hidden md:flex">
+<a class="font-headline-md text-headline-md text-on-background dark:text-surface-container-lowest hover:opacity-80 transition-opacity" href="#">BRP Properties</a>
+<div class="flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Services</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-primary-fixed-dim border-b border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Contact</a>
+<button class="text-on-surface hover:text-primary transition-colors ml-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Header -->
+<div class="flex md:hidden justify-between items-center px-margin-mobile py-4 w-full">
+<a class="font-headline-md text-headline-md text-on-background" href="#">BRP Properties</a>
+<button class="text-on-background">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Gallery Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] mt-[64px] md:mt-0 flex items-end pb-16">
+<!-- Full bleed image -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center" data-alt="A sweeping aerial photograph of a luxurious, modern architectural estate nestled in verdant, rolling hills under a soft dusk sky. The property features extensive glass facades, a vast infinity pool illuminated from within, and expansive terraced landscaping. The style is high-end architectural digest, emphasizing exclusivity, scale, and seamless integration with nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvWsOwO4sz8hsL9Cq188slAvtrhIMIQABHlPr0wsRhJWfZ2n22-9FGH09yMsrXNRNTHcfvq6M2nCJEwMqE1W2FErgd61fRvR1VmCg3C4tC_cRoJMqhneGkL_FszhgllDO6NDzb9ZJtvitY6m21c26PlsTwN-clT5SGst--5D9_ZZVPz5mzbxIsEQxjaZjgH2128WRbi887NHRiACx3Xd2aXLy8FEOZOU-9FS-NDAMqBMlf9WKbuSyrJ5SpFv6HP0vWSg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+</div>
+<!-- Content Overlay -->
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<div class="inline-block bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 mb-4 tracking-wider">
+                        FOR SALE
+                    </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white text-shadow-subtle mb-2">The Oura Residence</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl">A sanctuary of quiet luxury, blending modern precision with natural splendor in an exclusive hilltop enclave.</p>
+</div>
+</div>
+</section>
+<!-- Property Specs Bar -->
+<section class="bg-surface-container-lowest border-b border-outline-variant/30 py-8 relative z-20 -mt-8 shadow-[0_-10px_30px_rgba(0,0,0,0.05)] mx-margin-mobile md:mx-margin-desktop max-w-container-max md:mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 divide-x-0 md:divide-x divide-outline-variant/30 text-center md:text-left">
+<div class="flex flex-col items-center md:items-start md:pl-6 first:pl-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Configuration</span>
+<span class="font-headline-md text-headline-md text-on-background">4 BHK</span>
+</div>
+<div class="flex flex-col items-center md:items-start md:pl-6">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Area</span>
+<span class="font-headline-md text-headline-md text-on-background">5,500 SQFT</span>
+</div>
+<div class="flex flex-col items-center md:items-start md:pl-6">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Location</span>
+<span class="font-headline-md text-headline-md text-on-background">Address Upon Request</span>
+</div>
+<div class="flex flex-col items-center md:items-start md:pl-6">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Price</span>
+<span class="font-headline-md text-headline-md text-primary">₹12.5 Cr</span>
+</div>
+</div>
+</section>
+<!-- Property Description & Amenities -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16">
+<!-- Narrative -->
+<div class="lg:col-span-7 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Architectural Brilliance Meets Serene Living</h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-6">
+<p class="">
+                            The Oura Residence stands as a testament to uncompromising design and meticulous craftsmanship. Set against a backdrop of sweeping panoramas, this property redefines modern luxury with its expansive open-plan living spaces, floor-to-ceiling glazing, and seamless indoor-outdoor flow.
+                        </p>
+<p class="">
+                            Every material has been carefully curated to evoke a sense of quiet opulence—from the warm, hand-scraped hardwood floors to the custom-milled cabinetry and imported stone surfaces. The residence is designed not just for shelter, but as a holistic environment that nurtures calm and sophisticated living.
+                        </p>
+<p class="">
+                            The heart of the home is a chef-grade kitchen that flows effortlessly into formal and informal dining areas, all oriented towards the spectacular vistas and the meticulously landscaped grounds. It is an estate built for those who appreciate the luxury of space and the subtlety of truly exceptional design.
+                        </p>
+</div>
+</div>
+<!-- Amenities List -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-low p-8 h-full border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-background mb-8 border-b border-outline-variant/30 pb-4">Curated Amenities</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="pool" data-weight="fill">pool</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-background mb-1">Infinity Edge Pool</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Heated, with panoramic valley views and submerged lounging areas.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="movie" data-weight="fill">movie</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-background mb-1">Private Home Theatre</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Acoustically treated screening room with 4K projection.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="fitness_center" data-weight="fill">fitness_center</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-background mb-1">Wellness &amp; Gym</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Fully equipped training facility with sauna and steam room.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="park" data-weight="fill">park</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-background mb-1">Curated Gardens</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Designed by award-winning landscape architects, featuring native flora.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="security" data-weight="fill">security</span>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-background mb-1">Smart Estate Security</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Comprehensive biometric access and 24/7 monitored surveillance.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid / Details -->
+<section class="py-section-gap bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center text-on-background mb-16">The Finer Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Detail Card 1 -->
+<div class="relative group overflow-hidden md:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up shot of a luxurious, minimalist kitchen featuring seamless imported white marble countertops, matte black custom-milled cabinetry, and subtle gold brass hardware. Soft, natural sunlight streams across the pristine surfaces, highlighting the impeccable craftsmanship and quiet luxury aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBk9WnDdu20Hbs7GiOMsHdb874x5fvyoM21HtvZzCTik9FZJHJJptDb1Vvdr-7Piu3-CZaEqdb-pwjXx8uXIopd6lsyBPWskdg3Hx9hHfT53Dh-UYsUp6qkDUYGhh_Gfg2PLlSI0M7ZfQCZfgztG8jFtDRYFjwaeD5-uEGbAFUXJ7ToNF-HoUsoY9L9u2Xf6AyeGt1cwBsMMejCX7FNgp8FRI5Ymzqy6_1xMHFInbIkiFBXWpS_9nF2')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Culinary Excellence</h3>
+<p class="font-body-md text-white/80">Professional-grade appliances integrated into bespoke cabinetry.</p>
+</div>
+</div>
+<!-- Detail Card 2 -->
+<div class="relative group overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An elegant, sun-drenched master bathroom showcasing a freestanding sculptural stone bathtub sitting on wide-plank hardwood floors. Floor-to-ceiling windows offer a private view of a lush green courtyard. The lighting is bright and serene, evoking a spa-like atmosphere of pure relaxation and modern elegance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbRMFngRb2IsMJWAuq6C0nukkYIwJnQXFqAmopatBu4MrU9YaU0dVrH_GALTsJpXulus6VV1EBpONrrQHYz_6voWU8fbwt6SgVvCTi-g0rwrLP3VW5fPqasZU8whUWd8SCUke_bDCEjLewK--b6YSqG4juX6f2BlXfOaTo-yth0UAfFJFy2katHnLXJ0KPU7pD8H5YuzQONVJ4honCJzeOAtTH_SwBey_BYkI-gqpYTslv48kd57KS')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Spa Retreat</h3>
+<p class="font-body-md text-sm text-white/80">En-suite sanctuaries designed for ultimate restoration.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Agent & Inquiry Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- The Curator (Agent) -->
+<div class="flex flex-col md:flex-row gap-8 items-start bg-surface-container-low p-8 border border-outline-variant/20 hover:shadow-[0_10px_30px_rgba(197,160,89,0.08)] transition-shadow duration-500">
+<div class="w-full md:w-1/2 aspect-[3/4] relative shrink-0">
+<img class="absolute inset-0 w-full h-full object-cover grayscale-[20%]" data-alt="A professional, editorial-style portrait of a sophisticated male real estate agent in his 40s. He is wearing a sharply tailored, dark charcoal grey suit with a crisp white shirt and patterned tie. He stands confidently with a warm, trustworthy smile in a luxurious, high-rise penthouse office overlooking a sunlit city skyline. The lighting is warm and cinematic, conveying exclusivity and expertise." src="https://lh3.googleusercontent.com/aida/AEtjO1UvCXOluG0lBRmrjeIcUXt2YYNZf4sdGuV-D_AmlvCFZQ4cF3JTJlA_xWckL0edSqebIoqXSTwxg5BjMiH425PlyviASfP_lg9j07Rgu31_UGJeAci1CgS4lxJ59znpw9kvt0TLKO5NUwghSwwfMUyCYa5mFZFYhHw_WNQfSfzHUjewxec3MjTIattIQPR9JYwxZYDWQ1c6gB4CI0qwZUoHoGDEqW3cDlRuI-73H2Tv6vVJgM4YEAxO1CE">
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center h-full space-y-6">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">The Curator</span>
+<h3 class="font-headline-lg text-headline-lg text-on-background">Don White</h3>
+<p class="font-label-sm text-label-sm text-secondary mt-1">Senior Partner, Estate Heritage</p>
+</div>
+<p class="font-body-md text-on-surface-variant italic">
+                            "The Oura Residence is a rare gem in today's market—a perfect synthesis of architectural ambition and livable warmth. I invite you to experience its unique character."
+                        </p>
+<div class="space-y-3 pt-4 border-t border-outline-variant/30">
+<a class="flex items-center gap-3 text-on-background hover:text-primary transition-colors" href="mailto:don.white@estateheritage.com">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+<span class="font-label-sm text-label-sm">Contact via Email</span>
+</a>
+<a class="flex items-center gap-3 text-on-background hover:text-primary transition-colors" href="tel:+1234567890">
+<span class="material-symbols-outlined text-sm" data-icon="phone">phone</span>
+<span class="font-label-sm text-label-sm">Request a Call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="bg-surface-container-highest p-8 lg:p-12">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Inquire About Property</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Register your interest to receive the comprehensive property dossier or arrange a private viewing.</p>
+<form class="space-y-8">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline text-on-background font-body-md px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-transparent" id="name" name="name" placeholder="Full Name" required="" type="text">
+<label class="absolute left-0 -top-4 font-label-sm text-[10px] text-secondary peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary transition-all" for="name">Full Name</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline text-on-background font-body-md px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-transparent" id="email" name="email" placeholder="Email Address" required="" type="email">
+<label class="absolute left-0 -top-4 font-label-sm text-[10px] text-secondary peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary transition-all" for="email">Email Address</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline text-on-background font-body-md px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-transparent" id="phone" name="phone" placeholder="Phone Number" type="tel">
+<label class="absolute left-0 -top-4 font-label-sm text-[10px] text-secondary peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary transition-all" for="phone">Phone Number</label>
+</div>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-0 border-b border-outline text-on-background font-body-md px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-transparent resize-none" id="message" name="message" placeholder="Message" rows="3"></textarea>
+<label class="absolute left-0 -top-4 font-label-sm text-[10px] text-secondary peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary transition-all" for="message">Message (Optional)</label>
+</div>
+<button class="w-full bg-[#1A1C1E] text-white font-label-sm text-label-sm py-4 uppercase tracking-widest hover:bg-primary-container transition-colors duration-300 flex items-center justify-center gap-2" type="submit">
+<span class="">Submit Inquiry</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface dark:bg-inverse-surface border-t border-outline/10 dark:border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-gutter max-w-container-max mx-auto gap-unit opacity-80 hover:opacity-100 transition-opacity">
+<div class="font-headline-md text-headline-md text-on-background dark:text-surface-container-lowest mb-4 md:mb-0">BRP Properties</div>
+<div class="text-center md:text-left mb-4 md:mb-0 font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant">© 2024 BRP Properties. All Rights Reserved. Member of the Luxury Real Estate Guild.</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 transition-colors" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline decoration-1 underline-offset-4 transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
