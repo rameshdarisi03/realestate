@@ -194,7 +194,7 @@ export const TestimonialsSection: React.FC = () => {
           Stories of Sanctuary
         </p>
         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-current">
-          LOVED BY FAMILIES &amp; HOMEOWNERS IN MYSORE
+          Loved by Families &amp; Homeowners in Mysore
         </h2>
         <p className="text-sm opacity-75 font-sans leading-relaxed text-current">
           Real experiences from doctors, business owners, expats, and families who found their dream property with BRP Properties in Mysore.
