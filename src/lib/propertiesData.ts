@@ -8,6 +8,15 @@ export const CURRENCY_RATES = {
   INR: { symbol: '₹', rate: 83.5, prefix: '₹', suffix: ' Cr' },
 };
 
+export const POPULAR_CATEGORIES = [
+  { id: 'apartment', title: 'Apartment', count: '7 Properties', image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80' },
+  { id: 'house', title: 'House', count: '7 Properties', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80' },
+  { id: 'restaurant', title: 'Restaurant', count: '5 Properties', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80' },
+  { id: 'store', title: 'Store', count: '5 Properties', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80' },
+  { id: 'villa', title: 'Villa', count: '7 Properties', image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80' },
+  { id: 'spa', title: 'Spa', count: '8 Properties', image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+];
+
 export const PROPERTIES_COLLECTION: Property[] = [
   // Page 1: Items 1 to 6
   {
@@ -23,9 +32,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 6500,
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85', // Exterior
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85', // Interior Living
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85', // Master Suite
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A sprawling heritage bungalow in VV Mohalla, the most prestigious address in Mysore. Home to elite old-money families and prominent doctors, featuring wide tree-lined avenues and private landscaped courtyards.',
     architecturalDetails: 'Classic Mysore royal teakwood pillars with Italian marble flooring, high ceilings, and sprawling private gardens with mature mango trees.',
@@ -44,9 +53,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 4800,
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85', // Modern Villa Facade
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85', // High Ceiling Lounge
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85', // Private Terrace & Garden
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'Located in world-famous Gokulam, a global cultural and yoga hub in Mysore. Walking distance to international cafes and premier Ashtanga yoga institutes, designed with modern open-concept elegance.',
     architecturalDetails: 'Floor-to-ceiling glass architecture with open-air atrium, rooftop yoga deck, and custom modular teak kitchen.',
@@ -62,12 +71,12 @@ export const PROPERTIES_COLLECTION: Property[] = [
     priceDisplay: '₹2.75 Cr',
     priceValueCr: 2.75,
     bhk: 0,
-    sqft: 12000, // Massive residential plot
+    sqft: 12000,
     image: 'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85', // Grand Estate Entrance / Road
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85', // Expansive Green Plot View
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85', // Elevated Tree-Lined Perspective
+      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A highly exclusive, quiet, and elevated residential estate plot in north Mysore’s prestigious Yadavagiri. Preferred by industrial leaders and business owners seeking maximum privacy and expansive compound space.',
     architecturalDetails: 'MUDA approved, clear freehold title with 80-ft road frontage, mature mahogany trees on boundary, and immediate sanction for grand private villa construction.',
@@ -86,9 +95,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 3200,
     image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85', // Apartment Living
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85', // Dining & Balcony
-      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85', // Master Bedroom
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A posh luxury residence in Jayalakshmipuram sitting right next to VV Mohalla. Highly sought after by affluent families for its clean, serene environment, top schools, and modern luxury amenities.',
     architecturalDetails: 'Double-height balconies overlooking lush green canopies, Italian marble flooring, and 100% generator power backup.',
@@ -107,9 +116,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 4200,
     image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85', // Traditional-Modern Facade
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85', // Courtyard Hall
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85', // Study & Terrace
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A prestigious villa available on a 5-year long-term lease in Saraswathipuram, known as Mysore’s premier cultural hub. Surrounded by avenues housing judges, professors, and top medical professionals.',
     architecturalDetails: 'Thoughtfully planned central courtyard (Thotti Mane concept) blended with modern luxury fixtures, teak cabinetry, and home office library.',
@@ -125,12 +134,12 @@ export const PROPERTIES_COLLECTION: Property[] = [
     priceDisplay: '₹2.90 Cr',
     priceValueCr: 2.90,
     bhk: 0,
-    sqft: 43560, // 1 Acre
+    sqft: 43560,
     image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85', // Grand Estate Gate
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85', // Scenic Hill Backdrop Land
-      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85', // Perimeter Overview
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A 1-acre private estate parcel offering unhindered vistas of Chamundi Hill. Successfully acquired by a prominent industrialist family.',
     architecturalDetails: 'Perimeter stone fencing completed with private access lane directly connected to Mysore Ring Road.',
@@ -151,9 +160,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 3800,
     image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85', // Villa Front
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85', // Drawing Hall
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85', // Master Bedroom
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'An elegant 4 BHK independent duplex villa in the quiet, tree-canopied lanes of Yadavagiri. Ideal for senior executives and multinational directors looking for peaceful luxury living.',
     architecturalDetails: 'Spacious ground-floor master suite, wooden flooring in upstairs lounge, landscaped sit-out patio, and solar water heating.',
@@ -172,9 +181,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 3500,
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85', // Modern Zen Exterior
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85', // Sunlit Yoga Hall
-      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85', // Zen Garden Suite
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'Designed specifically for practitioners and teachers in Gokulam, this peaceful sanctuary features a dedicated sound-insulated yoga meditation studio and organic garden.',
     architecturalDetails: 'Natural kota stone and teakwood flooring, cross-ventilation designed to stay naturally cool throughout Mysore’s pleasant seasons.',
@@ -193,9 +202,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 10000,
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85', // Panoramic Land Parcel
-      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85', // Access Boulevard
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85', // Lakeview Perspective
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'Prime residential villa plot overlooking the scenic backwaters on KRS Road. Clear titles, wide access road, and surrounded by premier gated developments.',
     architecturalDetails: 'Corner plot with dual road access, soil testing and survey completed, ready for custom villa construction.',
@@ -214,9 +223,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 3600,
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85', // Luxury Building Facade
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85', // Expansive Living Area
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85', // Modular Kitchen & Balcony
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A premier 4 BHK luxury apartment in VV Mohalla, close to Mysore’s top hospitals, heritage clubs, and prestigious institutions.',
     architecturalDetails: 'Only two apartments per floor for maximum privacy. High-grade acoustic insulation, large wrap-around balconies.',
@@ -235,9 +244,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 4000,
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85', // Heritage Court Facade
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85', // Teak Finish Living Room
-      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85', // Private Courtyard
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A bespoke independent villa situated in one of the most culturally rich residential pockets of Mysore. Impeccably maintained with authentic woodwork and private garden.',
     architecturalDetails: 'South-facing Vastu compliant construction with teakwood frames, granite finishes, and spacious portico.',
@@ -256,9 +265,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 3100,
     image: 'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85', // Duplex Exterior
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85', // Contemporary Living Room
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85', // Balcony & Kitchen
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec9?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'Modern, brand-new 3 BHK duplex home available on long-term lease. Located in the rapidly appreciating residential sector of Vijayanagar.',
     architecturalDetails: 'Contemporary cubic architecture with designer lighting, Italian tiles, and covered car parking.',
@@ -279,9 +288,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 9600,
     image: 'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85', // Ring Road Frontage
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85', // Commercial Land Plot
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85', // Corner Perspective
+      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'High-visibility corner plot right on Mysore Outer Ring Road near Hebbal IT and industrial corridor. Perfect for corporate guest houses, luxury boutique clinics, or estate developments.',
     architecturalDetails: 'Commercial conversion eligible, wide dual access with 100-ft main road frontage.',
@@ -300,9 +309,9 @@ export const PROPERTIES_COLLECTION: Property[] = [
     sqft: 2900,
     image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85', // Greenview Duplex Facade
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85', // Bright Living Room
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85', // Master Suite
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A serene 3 BHK duplex home situated in Bogadi, close to top international schools and green belts. Fully equipped with modern fixtures.',
     architecturalDetails: 'Spacious family room with skylight, modular kitchen with granite countertops, and open terrace.',
@@ -318,12 +327,12 @@ export const PROPERTIES_COLLECTION: Property[] = [
     priceDisplay: '₹2.95 Cr',
     priceValueCr: 2.95,
     bhk: 0,
-    sqft: 21780, // Half Acre
+    sqft: 21780,
     image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
     gallery: [
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85', // Palace Road View
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85', // Lush Green Compound
-      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85', // Gated Stone Wall
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=85',
     ],
     description: 'A half-acre trophy parcel near the historic Lalitha Mahal Palace. Sold to a private heritage preservation trust.',
     architecturalDetails: 'Surrounded by heritage protected zones with royal palace vistas and ancient banyan trees.',
