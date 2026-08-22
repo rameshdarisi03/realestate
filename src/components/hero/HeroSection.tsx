@@ -131,7 +131,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
 
         {/* Flagship Headline: A Better Place to Begin. */}
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 max-w-2xl leading-[1.1] drop-shadow-2xl">
-          A Better Place to Begin.
+          A Better Place<br />to Begin.
         </h1>
 
         {/* Sub-Tag & Narrative */}
