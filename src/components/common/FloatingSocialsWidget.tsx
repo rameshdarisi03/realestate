@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 import {
   Moon,
@@ -16,9 +16,17 @@ import {
 } from 'lucide-react';
 
 export const FloatingSocialsWidget: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  // Collapsed by default on mobile / tablet (< 1024px)
+  const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === 'dark';
+
+  useEffect(() => {
+    // Only auto-open on large desktop monitors
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      setIsOpen(true);
+    }
+  }, []);
 
   return (
     <aside
