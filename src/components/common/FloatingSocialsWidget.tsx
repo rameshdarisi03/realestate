@@ -16,22 +16,24 @@ import {
 } from 'lucide-react';
 
 export const FloatingSocialsWidget: React.FC = () => {
-  // Collapsed by default on mobile / tablet (< 1024px)
+  // Collapsed by default on mobile devices
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === 'dark';
 
   useEffect(() => {
-    // Only auto-open on large desktop monitors
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+    // Only auto-expand on desktop screens (1280px and wider)
+    if (typeof window !== 'undefined' && window.innerWidth >= 1280) {
       setIsOpen(true);
+    } else {
+      setIsOpen(false);
     }
   }, []);
 
   return (
     <aside
       aria-label="Quick Actions & Socials"
-      className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center transition-transform duration-300 ease-in-out"
+      className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center transition-transform duration-300 ease-in-out select-none"
       style={{
         transform: isOpen
           ? 'translateY(-50%) translateX(0)'
@@ -41,7 +43,7 @@ export const FloatingSocialsWidget: React.FC = () => {
       {/* Toggle Tab with 100% Solid Opacity and Lighter Warm Gold Tone */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-6 h-12 bg-[#b87a20] hover:bg-[#a56c19] text-white rounded-l-md flex items-center justify-center shadow-lg transition-colors focus:outline-none border-l border-y border-amber-300/40"
+        className="w-6 h-12 bg-[#b87a20] hover:bg-[#a56c19] text-white rounded-l-md flex items-center justify-center shadow-lg transition-colors focus:outline-none border-l border-y border-amber-300/40 cursor-pointer flex-shrink-0"
         title={isOpen ? 'Collapse Quick Bar' : 'Expand Quick Bar'}
         aria-label={isOpen ? 'Collapse Quick Bar' : 'Expand Quick Bar'}
       >
@@ -49,7 +51,7 @@ export const FloatingSocialsWidget: React.FC = () => {
       </button>
 
       {/* Main Socials Bar with 100% Solid Opacity and Lighter Warm Honey Gold Color */}
-      <div className="bg-[#cb8c28] dark:bg-[#b87a20] text-white py-4 px-2.5 rounded-l-2xl shadow-[0_12px_35px_rgba(0,0,0,0.25)] flex flex-col items-center gap-3.5 border-l border-y border-amber-200/40">
+      <div className="bg-[#cb8c28] dark:bg-[#b87a20] text-white py-4 px-2.5 rounded-l-2xl shadow-[0_12px_35px_rgba(0,0,0,0.25)] flex flex-col items-center gap-3.5 border-l border-y border-amber-200/40 flex-shrink-0">
         
         {/* Day / Night Mode Switcher */}
         <button
